@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Helvetica;
+}
+
+body {
+    background-image: linear-gradient(315deg, #0D0B24 50%, rgb(82,24,250));
+    background-position: top center;
+    background-size: 200% 200%;
+}
+
+#main-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: .6rem;
+}
+
+header #logo {
+    flex: 1;
+}
+
+header #logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+header nav {
+    display: flex;
+    flex: 1.2;
+}
+
+header nav ul {
+    display: flex;
+    flex: 1;
+    gap: .2rem;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: .4rem;
+    color: white;
+    cursor: pointer;
+}
+
+header nav ul li:hover {
+    border-bottom: 1px solid white;
+}
+
+main {
+    display: flex;
+
+    height: 500px;
+    border: 1px solid white;
+}
+
+
+main #banner {
+    display: flex;
+
+    background: url('../img/bg1.jpg') no-repeat fixed center;
+    background-size: cover;
+    border-radius: 15px;
+    max-width: 550px;
+    width: 50%;
+}
+
+
+main #banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: .6rem;
+    color: #fdfdfd;
+}
+
+
+main #banner h2 {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2.7rem;
+    margin: 1rem 0;
+    text-align: center;
+    width: 80%;
+    color: #D70AC1;
+    text-shadow: 0px 0px 2px rgb(232, 206, 240);
+}
+
+main #banner p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 1rem 0;
+    top: 60px;
+}
+
+main #form-inscricao {
+    padding: .6rem;
+    background-color: #fdfdfd;
+    height: 100%;
+    /* width: 50%; */
+    /* border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    overflow-y: scroll;
+    scrollbar-color: dark purple;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.inputField{
+    height: 45px;
+    border-radius: 8px;
+    padding: .2rem .4rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    border: 1px solid #ccc inset;
+    padding: 1rem;
+}
+
+.ask-area{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.ask {
+    font-size: 1rem;
+    color: #D70AC1
+}
+
+.field-radio {
+    display: flex;
+    gap: .4rem;
+}
