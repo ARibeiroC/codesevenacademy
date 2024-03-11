@@ -4,74 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Code Seven Academy | Inscrição Estágio</title>
+
+    <!-- FONT GOOGLE EXTERNAL -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
     <div id="main-container">
         <header>
-            <div id="logo">
-                <img src="./src/img/logo.jfif" alt="logotipo">
+            <div id="first-header">
+                <div id="resizing-font">
+                    <p>A-</p>
+                    <p><span>100%</span></p>
+                    <p>A+</p>
+                </div>
+                <div id="dark-white-toggle">
+                    <p>toggle</p>
+                </div>
+                <div id="main-menu">
+                    <ul>
+                        <li><span><i class="fa-solid fa-phone-flip"></i></span>Me Liga</li>
+                        <li><span><i class="fa-brands fa-whatsapp"></i></span>WhatsApp</li>
+                        <li><span><i class="fa-brands fa-discord"></i></span>Discord</li>
+                        <li><span><i class="fa-solid fa-user"></i></span>Área de Estagiário</li>
+                    </ul>                    
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li>Regras para Inscrição</li>
-                    <li>Realizar Prova</li>
-                    <li>Simulado da Prova</li>
-                    <li>Discord</li>
-                </ul>
-            </nav>
+            <div id="secondary-header">
+                <div id="logo">
+                    <img src="./src/img/simpleLogoPurple.png" alt="">
+                    <img src="./src/img/textLogoPurple.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>Sobre o estágio</li>
+                        <li>Leis de Estágio</li>
+                        <li>Simulado</li>
+                        <li>Contatos</li>
+                    </ul>
+                </nav>
+                <div id="btn-increvase">
+                    <button>Inscreva-se</button>
+                </div>
+            </div>
         </header>
         <main>
-            <div id="banner">
-                 <h2>Curso de Formação de Instrutores</h2>
-            </div>
-            <div id="form-inscricao">
-                <form action="">
-                    <input type="text" id="name-candidato" class="inputField" placeholder="Primeiro nome">
-                    <input type="text" id="name-candidato" class="inputField"placeholder="Sobrenomes">
-                    <input type="text" id="name-candidato" class="inputField"placeholder="Matricula">
-                    <input type="text" id="name-candidato" class="inputField"placeholder="Telefone">
-                    <fieldset>
-                        <div class="ask-area">
-                            <h3 class="ask">Você já concluiu os cursos de Introdução à Informática e Windows?</h3>
-                            <div class="field-radio">
-                                <input type="radio" name="yes/no" id="yes" value="yes"><label for="yes">Sim</label>
+            <div id="container-content">
+                <div id="banner">
+                    <div id="bg-banner">
+                        <h2>Curso de Formação de Instrutores</h2>
+                    </div>
+                </div>
+                <div id="form-inscricao">
+                    <h2>Questionário de Inscrição</h2>
+                    <form>
+                        <fieldset>
+                            <div class="ask-area">
+                                <h3 class="ask">Você já concluiu os cursos de Introdução à Informática e Windows?</h3>
+                                <div class="field-radio">
+                                    <input type="radio" name="yes/no" id="yes" value="yes"><label for="yes">Sim</label>
+                                </div>
+                                <div class="field-radio">
+                                    <input type="radio" name="yes/no" id="no" value="no"><label for="no">Não</label>
+                                </div>
                             </div>
-                            <div class="field-radio">
-                                <input type="radio" name="yes/no" id="no" value="no"><label for="no">Não</label>
+                            <div class="ask-area">
+                                <h3 class="ask">Descreva os motivos que te incentivaram para se inscrever?</h3>
+                                <input type="text" id="descrption-reason" class="inputField" placeholder="Descreva aqui">
                             </div>
-                        </div>
-                        <div class="ask-area">
-                            <h3 class="ask">Descreva os motivos que te incentivaram para se inscrever?</h3>
-                            <input type="text" id="descrption-reason" placeholder="Descreva aqui">
-                        </div>
-                        <div class="ask-area">
-                            <h3 class="ask">Concordo em realizar a prova de qualificação.</h3>
-                            <input type="checkbox" id="concordo-prova" value="concordo">
-                        </div>
-                        <div class="ask-area">
-                            <h3 class="ask">Estou ciente que ao inscrever no Curso de formação de Instrutores, minhas condutas dentro da instituição estarão sujeitas a análise e que terão um peso fundamental para o meu perfil de candidato.</h3>
-                            <input type="checkbox" id="analise-perfil" value="ciente">
-                        </div>
-                        <div class="ask-area">
-                            <h3 class="ask">Declaro que sou maior de 16 </h3>
-                            <input type="checkbox" id="restricao-idade" value="ciente">
-                        </div>
-                        <div class="ask-area">
-                            <h3>Caso passe no processo seletivo, qual o horário gostaria de fazer seu estágio ?</h3>
-                            <select name="schedule" id="schedule">
-                                <option value="8">----SELECT----</option>
-                                <option value="8">08:00 às 12:00</option>
-                                <option value="8">10:00 às 14:00</option>
-                                <option value="8">12:00 às 16:00</option>
-                                <option value="8">14:00 às 18:00</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                </form>
+                            <div class="ask-area">
+                                <h3 class="ask">Concordo em realizar a prova de qualificação.</h3>
+                                <input type="checkbox" id="concordo-prova" value="concordo">
+                            </div>
+                            <div class="ask-area">
+                                <h3 class="ask">Estou ciente que ao inscrever no Curso de formação de Instrutores, minhas condutas dentro da instituição estarão sujeitas a análise e que terão um peso fundamental para o meu perfil de candidato.</h3>
+                                <input type="checkbox" id="analise-perfil" value="ciente">
+                            </div>
+                            <div class="ask-area">
+                                <h3 class="ask">Declaro que sou maior de 16 </h3>
+                                <input type="checkbox" id="restricao-idade" value="ciente">
+                            </div>
+                            <div class="ask-area">
+                                <h3>Caso passe no processo seletivo, qual o horário gostaria de fazer seu estágio ?</h3>
+                                <select name="schedule" id="schedule">
+                                   <option value="8">----SELECT----</option>
+                                   <option value="8">08:00 às 12:00</option>
+                                   <option value="8">10:00 às 14:00</option>
+                                   <option value="8">12:00 às 16:00</option>
+                                   <option value="8">14:00 às 18:00</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </main>
-        <footer></footer>
+        <footer id="#contatos">
+            <div id="main-footer-content">
+                <div id="lei-estagio">
+                    <h2>Estágio</h2>
+                    <p><a href="">Regras do Estágio</a></p>
+                    <p><a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11788.htm" target="_blank">Lei Nº 11.788 - Estágio</a></p>
+                </div>
+                <div id="contato"></div>
+            </div>
+            <div id="copyright">
+                <div id="text-copy">
+                    &copy; copyright 2024 - Code Seven Academy - 53.502.251/0001-30. Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
