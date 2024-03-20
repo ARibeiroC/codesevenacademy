@@ -1,0 +1,116 @@
+@import 'variables'
+    
+@mixin reset-page($font:'Helvetica')
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: $font
+
+
+@mixin flex($orientation: row)
+    display: flex
+    flex-direction: $orientation
+
+@mixin padding($top-bottom: 0, $left-right: 0)
+    padding: $top-bottom $left-right
+
+@mixin size-object($h: 100%, $w: 100%, $max-w: 100%, $max-h: 100%)    
+    width: $w
+    height: $h
+    max-width: $max-w 
+    max-height: $max-h
+
+@mixin centralization
+    margin: 0 auto
+    
+@mixin b-radius($radius: .25rem)
+    border-radius: $radius
+
+
+
+
+// Reset list style
+@mixin reset-list
+    list-style: none    
+
+
+
+
+@mixin reset-text-decoration
+    text-decoration: none
+
+
+
+// Menu horizontal
+@mixin h-menu($default-color-link: $color-darkgray, $hover-color-link: $color-darkgray)
+    @include reset-list
+    @include flex()
+    gap: .75rem
+    a
+        padding: 1rem .4rem
+        cursor: pointer
+        font-weight: bold
+
+    a
+        color: $default-color-link
+
+    a:hover
+
+        color: $hover-color-link
+
+
+
+@mixin style-border($weight: 1px, $border-color: $color-default, $style-border: solid)
+    border: $weight $border-color $style-border
+
+
+
+@mixin box-shadow-default($left-right: 1px, $top-bottom: 1px, $softness: 1px, $area: 0px, $color-shadow: $color-default)
+    box-shadow: $left-right $top-bottom $softness $area $color-shadow
+
+
+
+
+@mixin box-shadow-inset($left-right: 1px, $top-bottom: 1px, $softness: 1px, $area: 0px, $color-shadow: $color-default, $type-inset: inset)
+    box-shadow: $left-right $top-bottom $softness $area $color-shadow $type-inset
+
+
+
+
+@mixin style-button($bg-color: none, $text-color: $color-ice, $weight: 300)
+    height: 45px
+    padding: .6rem
+    background-color: $bg-color
+    color: $text-color
+    font-weight: $weight
+    cursor: pointer
+
+    &:active
+        @include box-shadow-inset(2px, 2px, 5px, 0px, $color-default, inset)
+        margin-top: 2px
+
+
+
+
+@mixin background-image($url, $size: cover, $pos: center, $repeat: no-repeat)
+    background-image: url($url)
+    background-size: $size
+    background-position: $pos
+    background-repeat: $repeat
+
+
+
+
+@mixin main-content($max-width)
+    @include flex(column)
+    @include centralization
+    width: $max-width
+
+
+
+    
+@mixin align-items($justify-content: flex-start, $align-items: flex-start)
+    justify-content: $justify-content
+    align-items: $align-items
+    
+    

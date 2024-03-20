@@ -13,111 +13,174 @@
     <!-- FONT AWESOME ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <script src="src/js/script.js" defer></script>
 </head>
 <body>
     <div id="main-container">
-        <header>
-            <div id="first-header">
-                <div id="resizing-font">
-                    <p>A-</p>
-                    <p><span>100%</span></p>
-                    <p>A+</p>
-                </div>
-                <div id="dark-white-toggle">
-                    <p>toggle</p>
-                </div>
-                <div id="main-menu">
-                    <ul>
-                        <li><span><i class="fa-solid fa-phone-flip"></i></span>Me Liga</li>
-                        <li><span><i class="fa-brands fa-whatsapp"></i></span>WhatsApp</li>
-                        <li><span><i class="fa-brands fa-discord"></i></span>Discord</li>
-                        <li><span><i class="fa-solid fa-user"></i></span>Área de Estagiário</li>
-                    </ul>                    
-                </div>
-            </div>
-            <div id="secondary-header">
-                <div id="logo">
-                    <img src="./src/img/simpleLogoPurple.png" alt="">
-                    <img src="./src/img/textLogoPurple.png" alt="">
-                </div>
-                <nav>
-                    <ul>
-                        <li>Sobre o estágio</li>
-                        <li>Leis de Estágio</li>
-                        <li>Simulado</li>
-                        <li>Contatos</li>
-                    </ul>
-                </nav>
-                <div id="btn-increvase">
-                    <button>Inscreva-se</button>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div id="container-content">
-                <div id="banner">
-                    <div id="bg-banner">
-                        <h2>Curso de Formação de Instrutores</h2>
+        <main id="content">
+            <section id="home">
+                <header>
+                    <!-- <div id="ribbon-header"></div> -->
+                    <div id="logo-area">
+                        <img src="./src/img/simpleLogoWhite.png" alt="">
+                        <img src="./src/img/textLogoWhite.png" alt="">
+                    </div>
+                    <nav>
+                        <ul>
+                            <a href="#main-container"><li>HOME</li></a>
+                            <a href="#about-internship"><li>SOBRE O ESTÁGIO</li></a>
+                            <a href="#prerequisites"><li>PRÉ-REQUESITOS DO ESTÁGIO</li></a>
+                            <a href="#events"><li>EVENTOS</li></a>
+                            <a href="#"><li>INSCRIÇÃO</li></a>
+                            <a href="#rodape"><li>CONTATOS</li></a>
+                        </ul>
+                        <button>ACESSE À PROVA</button>
+                    </nav>
+                </header>
+                <div id="frame-banner">
+                    <div id="description-banner">
+                        <h2>Faça parte do nosso projeto de formação de instrutor</h2>
+                        <h3>O curso de formação de instrutor é uma oportunidade para você agregar conhecimento e valor ao seu currículo. <a href="#about-internship">Saiba mais.</a></h3>
+
+                        <div id="bottom-banner">
+                            <button>Inscreva-se</button>
+                        </div>
                     </div>
                 </div>
-                <div id="form-inscricao">
-                    <h2>Questionário de Inscrição</h2>
-                    <form>
-                        <fieldset>
-                            <div class="ask-area">
-                                <h3 class="ask">Você já concluiu os cursos de Introdução à Informática e Windows?</h3>
-                                <div class="field-radio">
-                                    <input type="radio" name="yes/no" id="yes" value="yes"><label for="yes">Sim</label>
-                                </div>
-                                <div class="field-radio">
-                                    <input type="radio" name="yes/no" id="no" value="no"><label for="no">Não</label>
-                                </div>
-                            </div>
-                            <div class="ask-area">
-                                <h3 class="ask">Descreva os motivos que te incentivaram para se inscrever?</h3>
-                                <input type="text" id="descrption-reason" class="inputField" placeholder="Descreva aqui">
-                            </div>
-                            <div class="ask-area">
-                                <h3 class="ask">Concordo em realizar a prova de qualificação.</h3>
-                                <input type="checkbox" id="concordo-prova" value="concordo">
-                            </div>
-                            <div class="ask-area">
-                                <h3 class="ask">Estou ciente que ao inscrever no Curso de formação de Instrutores, minhas condutas dentro da instituição estarão sujeitas a análise e que terão um peso fundamental para o meu perfil de candidato.</h3>
-                                <input type="checkbox" id="analise-perfil" value="ciente">
-                            </div>
-                            <div class="ask-area">
-                                <h3 class="ask">Declaro que sou maior de 16 </h3>
-                                <input type="checkbox" id="restricao-idade" value="ciente">
-                            </div>
-                            <div class="ask-area">
-                                <h3>Caso passe no processo seletivo, qual o horário gostaria de fazer seu estágio ?</h3>
-                                <select name="schedule" id="schedule">
-                                   <option value="8">----SELECT----</option>
-                                   <option value="8">08:00 às 12:00</option>
-                                   <option value="8">10:00 às 14:00</option>
-                                   <option value="8">12:00 às 16:00</option>
-                                   <option value="8">14:00 às 18:00</option>
-                                </select>
-                            </div>
-                        </fieldset>
-                    </form>
+            </section>
+            <section id="about-internship">
+                <div id="frame-internship">
+                    <h2>Sobre o Estágio</h2>
+                    <h3>Desenvolva-se profissionalmente agregando conhecimento e experiência, essa é a nossa proposta no CURSO DE FORMAÇÃO DE INSTRUTORES - CFI.</h3>
+
+                    <div id="about-cfi">
+                        <h3>Curso de formação de Instrutores - CFI</h3>
+                        <p>O curso de formação de instrutores (CFI), é um projeto exclusivo para alunos da instituição MICROJOY, ele consiste em preparar os seus candidatos para o mercado de trabalho, somando valor profissional e qualificado ao seu curriculo. Para isso, você terá que ser aprovado em uma série de etapas, no final você poderá fazer parte do grupo exclusivo de estagiários da CODE SEVEN ACADEMY em parceiria com a MICROJOY.</p>
+                        <P>Sendo assim, você irá receber treinamento para se desenvolver profissionalmente, tornando-se mais competivo para o mercado de trabalho, essa é a nossa proposta para vocês alunos MICROJOY, ir além, torn-se um profissional diferenciado e competitivo para as oportunidades que virão.</P>
+                    </div>
+                    
+
+                    <h2>Perguntas frequentes</h2>
+
+                    <h3>O que mais eu ganho sendo estagiário?</h3>
+                    <p>Aquele que for aprovado em todas as etapas, poderá irá fazer parte da nossa equipe, tendo acesso direto ao nosso Profº, você também terá acesso em primeira mão sobre diversas atividades que venham a ocorrer na instituição, terá acesso a um canal exclusivo da nossa comunidade no DISCORD, onde centralizamos diversas vagas de emprego, proporcionando assim um auxilio na busca pro uma oportinidade de trabalho, e para além disso, você ainda irá receber uma ajuda de custo em dinheiro.</p>
+
+                    <h3>Como faço para participar ?</h3>
+                    <p>É só fazer sua inscrição. Outro pronto que devemos ficar atentos é que as inscrições são abertas de tempo em tempo, então é necessário ficar atento na comunidade do discord e/ou aqui no site.</p>
+
+                    <h3>Qualquer aluno pode participar?</h3>
+                    <p>Infelizmente não, para poder candidatar-se para o processo seletivo é necessário cumprir alguns pré-requesitos, tais como descrito na seção <a href="#">Pré-requesitos do Estágio</a></p>
                 </div>
-            </div>
+            </section>
+            <section id="prerequisites">
+                <h2>Pré-requesitos</h2>
+                <h3>Para poder ser um candidato do processo seletivo para o Curso de Formação de Instrutor(estágio) é necessário cumprir todos os requisitos abaixo:</h3>
+                <ul>
+                    <li>Ter 16 anos ou mais</li>
+                    <li>Ter concluído o módulo de Introdução a Informática e Window 10</li>
+                    <li>Estar em dia com o pagamento das parcelas do seu curso.</li>
+                    <li>Ter disponibilidade de horário aos sábados</li>
+                </ul>
+                <p>Cumprindo todos esses requisitos, você poderá fazer sua inscrição para o processo seletivo.</p>
+                <p>Fique atento as data de aberturas para incrição no menu de <span><a href="#">Eventos</a></span> ou em nossa comunidade no <span><a href="#">DISCORD</a></span>.</p>
+            </section>
+            <section id="application-form">
+                <h2>Formuário de Inscrição</h2>
+                <h3>Cursos de formação de Instrutures - CFI</h3>
+                <form>
+                    <div>
+                        <label for="registration">Matricula</label>
+                        <input type="text" name="registration" id="registration" placeholder="Ex: 009999">
+                    </div>
+                    <div>
+                        <label for="responsible-name">Nome do responsável</label>
+                        <input type="text" name="responsible-name" id="responsible-name" placeholder="Ex: Pedro Luiz Carvalho de Souza">
+                    </div>
+                    <div>
+                        <label for="first-name">Primeiro nome</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Ex: João">
+                    </div>
+                    <div>
+                        <label for="surnames">Sobrenomes</label>
+                        <input type="text" name="surnames" id="surnames" placeholder="Ex: da Silva Requião">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email" placeholder="Ex: alunos@gmail.com">
+                    </div>
+                    <div>
+                        <label for="celphone-number">Celular</label>
+                        <input type="tel" name="celphone-number" id="celphone-number" placeholder="(11) 00000-0000">
+                    </div>
+                    <div>
+                        <label for="current-module">Módulo atual</label>
+                        <input type="tel" name="current-module" id="current-module" placeholder="Ex: Excel">
+                    </div>
+
+                    <fieldset id="validate-application-form">
+                        <h3>Para validar sua inscrição é preciso responder a este questionário</h3>
+                        
+                        <p>Este questionário tem como objetivo verificar se todos os pré-requisitos foram atendidos</p>
+
+                        <div id="validate-ask-1">
+                            <h4>1 - Selecione os módulos que você possui pelo menos conhecimento básico</h4>
+                            <input type="checkbox" name="introducao-informatica" id="introducao-informatica" value="introducao-informatica"><label for="introducao-informatica">Introdução à Informática</label>
+                            <input type="checkbox" name="windows10" id="windows10"><label for="windows10" value="windows10">Windows 10</label>
+                            <input type="checkbox" name="normas-abnt" id="normas-abnt"><label for="normas-abnt" value="normas-abnt">Normas ABNT</label>
+                            <input type="checkbox" name="word-2016" id="word-2016"><label for="word-2016" value="word-2016">Microsoft Office Word 2016</label>
+                            <input type="checkbox" name="excel-2016" id="excel-2016"><label for="excel-2016" value="excel-2016">Microsoft Office Excel 2016</label>
+                            <input type="checkbox" name="powerpoint-2016" id="powerpoint-2016"><label for="powerpoint-2016" value="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
+                        </div>
+                        <div id="validate-ask-2">
+                            <h4 for="date-birth">2 - Qual sua data de nascimento?</h4>
+                            <input type="text" name="date-birth" id="date-birth">
+                        </div>
+                        <div id="description-reason">
+                            <h4>3 - Descreva o motivo pelo qual gostaria de ser um estagiátio</h4>
+                            <input type="text" name="input-description-reason" id="input-description-reason" placeholder="EX: Gostaria de participar porque quero ampliar meus conhecimentos e ser um profissional diferenciado...">
+                        </div>
+                        <div id="rules">
+                            <h4>4 - Leia as regras do estágio</h4>
+                            <a href="#">Regras do estágio</a>
+                        </div>
+                        <div id="rules">
+                            <input type="checkbox" name="rules-check" id="rules-check" valeu="Aceito">
+                            <label>5 - Li e aceito os termos para ser um estagiário.</label>                            
+                        </div>
+                        <div id="profile-review">
+                            <input type="checkbox" name="term-accept" id="term-accept" value="aceito">
+                            <label for="term-accept">
+                                Estou ciente que ao inscrever-me no Curso de formação de instrutores (CFI), minhas condutas dentro e fora da instituição estão sujeitas a análise e que terão um peso fundamenta para o meu perfil de candidato.
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button type="button">Finalizar Inscrição</button>
+                </form>
+            </section>
         </main>
-        <footer id="#contatos">
-            <div id="main-footer-content">
-                <div id="lei-estagio">
-                    <h2>Estágio</h2>
-                    <p><a href="">Regras do Estágio</a></p>
-                    <p><a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11788.htm" target="_blank">Lei Nº 11.788 - Estágio</a></p>
+        <footer id="rodape">
+            <div id="footer-info">
+                <div id="footer-menu">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#main-container">HOME</a></li>
+                        <li><a href="#about-internship">SOBRE O ESTÁGIO</a></li>
+                        <li><a href="#prerequisites">PRÉ-REQUESITOS DO ESTÁGIO</a></li>
+                        <li><a href="#events">EVENTOS</a></li>
+                        <li><a href="#">INSCRIÇÃO</a></li>
+                        <li><a href="#rodape">CONTATOS</a></li>
+                    </ul>
                 </div>
-                <div id="contato"></div>
+                <div id="footer-contats">
+                    <h3>Contatos</h3>
+                    <p><a href="#"><i class="fa-brands fa-discord"></i> Comunidade do discord</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p>
+                    <p><i class="fa-regular fa-envelope"></i> E-mail: codesevenacademy@outlook.com</p>
+                </div>
             </div>
             <div id="copyright">
-                <div id="text-copy">
-                    &copy; copyright 2024 - Code Seven Academy - 53.502.251/0001-30. Todos os direitos reservados
-                </div>
+                <p>&copy; 2024 Code Seven Academy - 53.502.251/0001-30. Todos os direitos reservados</p>
             </div>
         </footer>
     </div>

@@ -1,0 +1,103 @@
+// IMPORTS
+@import 'mixins'
+@import 'variables'
+
+* 
+    @include reset-page('Helvetica')
+    @include reset-text-decoration
+    scroll-behavior: smooth
+
+body
+    background: $color-ice
+
+    
+    a
+        color: $color-pink
+
+    #main-container
+        @include main-content(1400px)
+
+        
+        #content
+            @include flex(column)
+
+            header
+                @include flex
+                @include align-items(space-between, center)
+                background: rgba(0, 0, 0, .7)
+                @include padding(.4rem .8rem)
+                // border-bottom: 1px solid $color-ice
+
+                #logo-area
+                    padding: .6rem
+                    max-height: 100%
+                    height: 75px
+
+                    img
+                        max-height: 100%
+
+                nav
+                    @include flex
+                    gap: 1rem
+
+                    ul
+                        @include h-menu($color-ice, $color-pink)
+
+                    button
+                        @include style-button($color-pink, $color-ice, 900)
+                        @include b-radius
+                        @include style-border(2px, transparent)
+
+            #home
+                @include background-image('../img/estagio/1.jpeg', 80%, top)
+                background-attachment: fixed
+                #frame-banner
+                    @include flex
+                    background: rgba(0, 0, 0, .7)
+                    @include align-items(center)
+                    @include size-object(85vh)
+                    @include centralization                 
+
+
+                    #description-banner
+                        @include flex(column)
+                        @include padding(0rem, 1rem)
+                        @include align-items(flex-start, center)
+                        // border: 1px solid black
+                        @include size-object(auto, 80%)
+                        color: $color-ice
+
+                        h2
+                            flex: 1
+                            margin: 4rem 0rem 0rem 0rem
+                            font-size: 3rem
+                            text-align: center
+                        
+                        h3
+                            flex: 1
+                            margin: 6rem 0rem
+                            font-size: 1.4rem
+                            text-align: center
+
+                        a
+                            font-size: 1rem
+
+                        #bottom-banner
+                            @include flex
+                            @include align-items(center, center)
+                            @include size-object(auto, 80%)
+
+                            button 
+                                @include style-button($color-pink, $color-ice, 700)
+                                @include style-border(0, transparent, none)
+                                @include size-object(50px, 150px)
+                                @include b-radius
+                                
+                            
+                            // button:active
+                            //     @include box-shadow-inset(2px, 2px, 5px, 0px, $color-default, inset)
+                            //     margin-top: 4px
+
+
+            // #about-internship
+
