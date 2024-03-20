@@ -77,7 +77,7 @@ body #main-container #content header nav button:active {
 }
 body #main-container #content #home {
   background-image: url("../img/estagio/1.jpeg");
-  background-size: 80%;
+  background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
