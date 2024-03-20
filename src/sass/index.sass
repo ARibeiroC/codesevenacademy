@@ -14,6 +14,20 @@ body
     a
         color: $color-pink
 
+    h2
+        margin-top: 2rem
+        margin-bottom: 2rem
+        font-size: 2rem
+
+    h3
+        margin: 0rem 0rem 1rem 0
+        font-size: 1.4rem
+        text-align: justify
+
+    p   
+        text-align: justify
+        line-height: 1.5rem
+
     #main-container
         @include main-content(1400px)
 
@@ -56,23 +70,22 @@ body
                     background: rgba(0, 0, 0, .7)
                     @include align-items(center)
                     @include size-object(85vh)
-                    @include centralization                 
+                    @include centralization
+                    @include padding(.4rem .8rem)                
 
 
                     #description-banner
                         @include flex(column)
-                        @include padding(0rem, 1rem)
                         @include align-items(flex-start, center)
-                        // border: 1px solid black
                         @include size-object(auto, 80%)
                         color: $color-ice
 
-                        h2
+                        h1
                             flex: 1
                             margin: 4rem 0rem 0rem 0rem
                             font-size: 3rem
                             text-align: center
-                        
+
                         h3
                             flex: 1
                             margin: 6rem 0rem
@@ -92,12 +105,31 @@ body
                                 @include style-border(0, transparent, none)
                                 @include size-object(50px, 150px)
                                 @include b-radius
-                                
-                            
-                            // button:active
-                            //     @include box-shadow-inset(2px, 2px, 5px, 0px, $color-default, inset)
-                            //     margin-top: 4px
 
 
-            // #about-internship
+            #about-internship
+                @include padding(.4rem .8rem)
+                background: #f3f3f3 url(../img/simpleLogoWhite.png) no-repeat fixed center
+                background-size: 35%
+
+                #frame-internship
+                    @include flex(column)
+                    gap: 1rem
+
+                    h3
+                        flex: 0
+                        margin: 0rem 0rem 1rem 0
+                        font-size: 1.4rem
+                        text-align: justify
+
+                    #about-cfi
+                    
+            
+            #prerequisites
+                background: url('../img/estagio/pre-requisitos.jpg') no-repeat fixed top
+                background-size: cover
+                height: 100vh
+
+
+
 
