@@ -28,6 +28,12 @@ body
         text-align: justify
         line-height: 1.5rem
 
+    ul
+        list-style: none
+
+    section
+        margin-bottom: 1rem
+
     #main-container
         @include main-content(1400px)
 
@@ -126,9 +132,24 @@ body
                     
             
             #prerequisites
-                background: url('../img/estagio/pre-requisitos.jpg') no-repeat fixed top
+                @include padding(.4rem, .8rem 4rem .8rem)
+                background: $color-purple
+                color: $color-ice
+                @include b-radius
+
+            #application-form
+                @include flex
+                @include b-radius
+                background: url('../img/estagio/form.jpg') no-repeat fixed top
                 background-size: cover
+                color: $color-ice
                 height: 100vh
+
+                #filter-background
+                    @include padding(.4rem, .8rem 4rem .8rem)
+                    @include b-radius
+                    background: rgba(0, 0, 0, .7)
+
 
 
 

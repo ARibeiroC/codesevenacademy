@@ -27,6 +27,12 @@ body p {
   text-align: justify;
   line-height: 1.5rem;
 }
+body ul {
+  list-style: none;
+}
+body section {
+  margin-bottom: 1rem;
+}
 body #main-container {
   display: flex;
   flex-direction: column;
@@ -180,9 +186,24 @@ body #main-container #content #about-internship #frame-internship h3 {
   text-align: justify;
 }
 body #main-container #content #prerequisites {
-  background: url("../img/estagio/pre-requisitos.jpg") no-repeat fixed top;
+  padding: 0.4rem 0.8rem 4rem 0.8rem;
+  background: #5C0BA3;
+  color: #f7f7f7;
+  border-radius: 0.25rem;
+}
+body #main-container #content #application-form {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.25rem;
+  background: url("../img/estagio/form.jpg") no-repeat fixed top;
   background-size: cover;
+  color: #f7f7f7;
   height: 100vh;
+}
+body #main-container #content #application-form #filter-background {
+  padding: 0.4rem 0.8rem 4rem 0.8rem;
+  border-radius: 0.25rem;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /*# sourceMappingURL=index.css.map */
