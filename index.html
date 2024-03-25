@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Code Seven Academy | Inscrição Estágio</title>
+    <title>Code Seven Academy | Academia de Estagiário</title>
 
     <!-- FONT GOOGLE EXTERNAL -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,10 @@
                 <header>
                     <!-- <div id="ribbon-header"></div> -->
                     <div id="logo-area">
-                        <img src="./src/img/simpleLogoWhite.png" alt="">
-                        <img src="./src/img/textLogoWhite.png" alt="">
+                        <img id="simpleLogo" src="./src/img/simpleLogoWhite.png" alt="Logotipo Code Seven Simplificado">
+                        <img id="textLogo" src="./src/img/textLogoWhite.png" alt="Texto do logotipo com o nome da Empresa">
                     </div>
-                    <nav>
+                    <nav id="header-menu">
                         <ul>
                             <a href="#main-container"><li>HOME</li></a>
                             <a href="#about-internship"><li>SOBRE O ESTÁGIO</li></a>
@@ -37,13 +37,19 @@
                         </ul>
                         <button>ACESSE À PROVA</button>
                     </nav>
+                    <div id="menu-toggle-content">
+                        <input id="menu-toggle" type="checkbox" />
+                        <label class='menu-button-container' for="menu-toggle">
+                            <div class='menu-button'> </div>
+                        </label>
+                    </div>
                 </header>
                 <div id="frame-banner">
                     <div id="description-banner">
-                        <h1>Faça parte do nosso projeto de formação de instrutor</h1>
+                        <h1 class="title">Faça parte do nosso projeto de formação de instrutor</h1>
                         <h3>O curso de formação de instrutor é uma oportunidade para você agregar conhecimento e valor ao seu currículo. <a href="#about-internship">Saiba mais.</a></h3>
 
-                        <div id="bottom-banner">
+                        <div id="button-banner">
                             <button>Inscreva-se</button>
                         </div>
                     </div>

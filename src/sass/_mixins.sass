@@ -78,7 +78,6 @@
 
 
 @mixin style-button($bg-color: none, $text-color: $color-ice, $weight: 300)
-    height: 45px
     padding: .6rem
     background-color: $bg-color
     color: $text-color
@@ -104,7 +103,7 @@
 @mixin main-content($max-width)
     @include flex(column)
     @include centralization
-    width: $max-width
+    max-width: $max-width
 
 
 

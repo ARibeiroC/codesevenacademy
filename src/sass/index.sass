@@ -35,49 +35,102 @@ body
         margin-bottom: 1rem
 
     #main-container
-        @include main-content(1400px)
-
+        // @include main-content(1400px)
         
         #content
             @include flex(column)
+            // @include main-content(1440px)
 
-            header
-                @include flex
-                @include align-items(space-between, center)
-                background: rgba(0, 0, 0, .7)
-                @include padding(.4rem .8rem)
-                // border-bottom: 1px solid $color-ice
-
-                #logo-area
-                    padding: .6rem
-                    max-height: 100%
-                    height: 75px
-
-                    img
-                        max-height: 100%
-
-                nav
-                    @include flex
-                    gap: 1rem
-
-                    ul
-                        @include h-menu($color-ice, $color-pink)
-
-                    button
-                        @include style-button($color-pink, $color-ice, 900)
-                        @include b-radius
-                        @include style-border(2px, transparent)
 
             #home
                 @include background-image('../img/estagio/1.jpeg', 100%, top)
                 background-attachment: fixed
+                @include size-object(100vh)
+        
+                header
+                    @include flex
+                    @include align-items(center, center)
+                    background: rgba(0, 0, 0, .7)
+                    @include padding(.4rem .8rem)
+                    height: 10%
+                    widows: 100%
+                    margin: 0 auto
+
+                    #logo-area
+                        padding: .6rem
+                        height: 4rem
+
+                        img
+                            max-height: 100%
+                            
+
+                    #header-menu
+                        @include flex
+                        gap: 1rem
+
+                        ul
+                            @include h-menu($color-ice, $color-pink)
+
+                        button
+                            @include style-button($color-pink, $color-ice, 900)
+                            @include b-radius
+                            @include style-border(2px, transparent)
+                        
+                    // Hamburger Menu
+                    #menu-toggle-content
+                        display: flex
+        
+                        #menu-toggle
+                            display: none
+                        
+                        .menu-button-container 
+                            display: none
+                            height: 100%
+                            width: 30px
+                            cursor: pointer
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            padding: 1rem
+
+
+                        .menu-button, .menu-button::before, .menu-button::after
+                            display: none
+                            background-color: $color-ice
+                            position: absolute
+                            height: 4px
+                            width: 30px
+                            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1)
+                            border-radius: 2px
+                            pointer-events: none
+
+                        .menu-button::before
+                            content: ''
+                            margin-top: -8px
+
+                        .menu-button::after
+                            content: ''
+                            margin-top: 8px
+
+                        #menu-toggle:checked + .menu-button-container .menu-button::before
+                            margin-top: 0px
+                            transform: rotate(405deg)
+
+                        #menu-toggle:checked + .menu-button-container .menu-button
+                            background: rgba(255, 255, 255, 0)
+
+                        #menu-toggle:checked + .menu-button-container .menu-button::after
+                            margin-top: 0px
+                            transform: rotate(-405deg)
+
+
                 #frame-banner
                     @include flex
                     background: rgba(0, 0, 0, .7)
                     @include align-items(center)
-                    @include size-object(85vh)
-                    @include centralization
-                    @include padding(.4rem .8rem)                
+                    @include size-object(90%, 100%)
+                    // @include centralization
+                    @include padding(.4rem .8rem)           
 
 
                     #description-banner
@@ -101,7 +154,7 @@ body
                         a
                             font-size: 1rem
 
-                        #bottom-banner
+                        #button-banner
                             @include flex
                             @include align-items(center, center)
                             @include size-object(auto, 80%)
@@ -115,7 +168,8 @@ body
 
             #about-internship
                 @include padding(.4rem .8rem)
-                background: $color-ice url(../img/simpleLogoWhite.png) no-repeat fixed center
+                background: $color-ice url(../img/simpleLogoPurple.png) no-repeat fixed center
+                background-blend-mode: color-dodge
                 background-size: 35%
 
                 #frame-internship
@@ -128,7 +182,7 @@ body
                         font-size: 1.4rem
                         text-align: justify
 
-                    #about-cfi
+                    // #about-cfi
                     
             
             #prerequisites
@@ -154,3 +208,193 @@ body
 
 
 
+// RESPONSIVITY IN THE PAGE
+
+@media (max-width: 375px)
+    
+    body
+        max-width: 100%
+        width: 100%
+
+        #main-container
+            @include main-content(100%)
+
+            #home
+                border: 1px solid red
+                height: 70vh !important
+                @include flex(column)
+                @include background-image('../img/estagio/1.jpeg')
+                background-size: cover !important
+                background-position: bottom !important
+                header
+                    @include align-items(space-between !important, center)
+                    @include size-object(100%, 100%)
+                    @include align-items(center, center)
+
+                    #logo-area
+                        @include flex
+                        @include align-items(default /* como é necessário passar os dois parametros caso deseje colocar apenas um alinhamento então podemos usar o termo default para representar o valor padrão */, center)
+
+                    #simpleLogo
+                        height: 80% !important
+
+                    #textLogo
+                        display: none
+
+                    nav button
+                        display: none
+
+                    nav ul li
+                        display: none
+
+                    .menu-button-container
+                        display: flex !important
+
+                    .menu-button, .menu-button::before, .menu-button::after
+                        display: flex !important
+
+                #frame-banner
+                    // border: 1px solid white
+
+                #description-banner
+                    width: 100% !important
+                    h1
+                        font-size: 1.6rem !important
+                        margin: 1rem 0rem 0rem 0rem !important
+                        line-height: 2rem
+
+                    h3
+                        font-size: .8rem !important
+                        margin: 2rem 0rem !important
+                        line-height: 2rem
+
+                    a
+                        font-size: .8rem !important
+
+                    #button-banner
+                        button
+                            @include size-object(40px !important, 100px)
+
+
+// @media (max-width: 425px)
+    
+//     body
+//         max-width: 100%
+//         width: 100%
+
+//     #main-container
+//         @include main-content(100%)
+//         border: 1px solid
+
+//         #home
+//             border: 1px solid
+//             height: 70vh !important
+
+//         header
+//             @include align-items(space-between !important, center) 
+//             border: 1px solid
+
+//         #logo-area
+//             height: 100%
+
+//         #simpleLogo
+//             height: 80% !important
+
+//         #textLogo
+//             display: none
+
+//         nav button
+//             display: none
+
+//         nav ul li
+//             display: none
+
+//         .menu-button-container
+//             // display: block
+
+//         .menu-button, .menu-button::before, .menu-button::after
+//             display: block
+//             margin-right: 25px
+
+//         #frame-banner
+//             // border: 1px solid white
+
+//         #description-banner
+//             // @include size-object(auto, 100%)
+//         .title
+//             font-size: 2.5rem
+
+// @media (max-width: 1024px)
+
+//     body
+//         max-width: 100%
+//         width: 100%
+//         height: auto
+
+//     #main-container
+//         @include main-content(100%)
+
+//         #content
+//             #home                
+//                 height: 90vh !important
+                
+//                 #textLogo
+//                     display: none
+
+//                 header
+//                     nav button
+//                         display: none
+
+//                     nav ul li
+//                         display: none
+
+//                     .menu-button-container
+//                         // display: block
+
+//                     .menu-button, .menu-button::before, .menu-button::after
+//                         display: block
+//                         margin-right: 25px
+
+//                 #frame-banner
+//                     border: 1px solid green
+//                     @include size-object(100%)
+
+//                     #description-banner
+//                         // @include size-object(auto, 100%)
+//                         .title
+//                             font-size: 2rem
+
+
+
+
+// RESPONSIVITY MENU HAMBURGER
+
+
+    
+// #menu-toggle ~ .menu li 
+//     height: 0
+//     margin: 0
+//     padding: 0
+//     border: 0
+//     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1)
+
+// #menu-toggle:checked ~ .menu li
+//     border: 1px solid #333
+//     height: 2.5em
+//     padding: 0.5em
+//     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1)
+
+// .menu > li
+//     display: flex
+//     justify-content: center
+//     margin: 0
+//     padding: 0.5em 0
+//     width: 100%
+//     color: white
+//     background-color: #222
+
+// .menu > li:not(:last-child)
+//     border-bottom: 1px solid #444
+    
+
+    
