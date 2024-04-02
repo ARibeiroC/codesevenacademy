@@ -1,0 +1,369 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f0f0f0;
+}
+body a {
+  color: #D70AC1;
+}
+body h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+body h3 {
+  margin: 0rem 0rem 1rem 0;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+body p {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+body ul {
+  list-style: none;
+}
+body section {
+  margin-bottom: 1rem;
+}
+body #main-container #content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+}
+body #main-container #content #home {
+  background-image: url("../img/estagio/1.jpeg");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+body #main-container #content #home header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.4rem 0.8rem 0;
+  height: 10%;
+  widows: 100%;
+  margin: 0 auto;
+}
+body #main-container #content #home header #logo-area {
+  padding: 0.6rem;
+  height: 4rem;
+}
+body #main-container #content #home header #logo-area img {
+  max-height: 100%;
+}
+body #main-container #content #home header #header-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  gap: 1rem;
+}
+body #main-container #content #home header #header-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  gap: 0.75rem;
+}
+body #main-container #content #home header #header-menu ul a {
+  padding: 1rem 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+body #main-container #content #home header #header-menu ul a {
+  color: #f0f0f0;
+}
+body #main-container #content #home header #header-menu ul a:hover {
+  color: #D70AC1;
+}
+body #main-container #content #home header #header-menu button {
+  padding: 0.6rem;
+  background-color: #D70AC1;
+  color: #f0f0f0;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 2px transparent solid;
+}
+body #main-container #content #home header #header-menu button:active {
+  box-shadow: 2px 2px 5px 0px #111 inset;
+  margin-top: 2px;
+}
+body #main-container #content #home header #menu-toggle-content {
+  display: flex;
+}
+body #main-container #content #home header #menu-toggle-content #menu-toggle {
+  display: none;
+}
+body #main-container #content #home header #menu-toggle-content .menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+body #main-container #content #home header #menu-toggle-content .menu-button, body #main-container #content #home header #menu-toggle-content .menu-button::before, body #main-container #content #home header #menu-toggle-content .menu-button::after {
+  display: none;
+  background-color: #f0f0f0;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+  pointer-events: none;
+}
+body #main-container #content #home header #menu-toggle-content .menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+body #main-container #content #home header #menu-toggle-content .menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+body #main-container #content #home header #menu-toggle-content #menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+body #main-container #content #home header #menu-toggle-content #menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+body #main-container #content #home header #menu-toggle-content #menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+body #main-container #content #home #frame-banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 90%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0.4rem 0.8rem 0;
+}
+body #main-container #content #home #frame-banner #description-banner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  color: #f0f0f0;
+}
+body #main-container #content #home #frame-banner #description-banner h1 {
+  flex: 1;
+  margin: 4rem 0rem 0rem 0rem;
+  font-size: 3rem;
+  text-align: center;
+}
+body #main-container #content #home #frame-banner #description-banner h3 {
+  flex: 1;
+  margin: 6rem 0rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+body #main-container #content #home #frame-banner #description-banner a {
+  font-size: 1rem;
+}
+body #main-container #content #home #frame-banner #description-banner #button-banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+body #main-container #content #home #frame-banner #description-banner #button-banner button {
+  padding: 0.6rem;
+  background-color: #D70AC1;
+  color: #f0f0f0;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0 transparent none;
+  width: 150px;
+  height: 50px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.25rem;
+}
+body #main-container #content #home #frame-banner #description-banner #button-banner button:active {
+  box-shadow: 2px 2px 5px 0px #111 inset;
+  margin-top: 2px;
+}
+body #main-container #content #about-internship {
+  padding: 0.4rem 0.8rem 0;
+  background-color: #f0f0f0;
+  background-image: url(../img/simpleLogoPurple.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: color-dodge;
+  background-size: 45%;
+}
+body #main-container #content #about-internship #about-internship-frame {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+}
+body #main-container #content #about-internship #about-internship-frame h3 {
+  flex: 0;
+  margin: 1rem 0rem;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+body #main-container #content #about-internship #about-internship-frame p {
+  line-height: 1.6rem;
+  text-align: justify;
+}
+body #main-container #content #prerequisites {
+  padding: 0.4rem 0.8rem 4rem 0.8rem;
+  background: #110e2d;
+  color: #f0f0f0;
+  border-radius: 0.25rem;
+}
+body #main-container #content #application-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  border-radius: 0.25rem;
+  background: url("../img/estagio/form.jpg") no-repeat fixed top;
+  background-size: cover;
+  color: #f0f0f0;
+  height: 100vh;
+}
+body #main-container #content #application-form #filter-background {
+  padding: 0.4rem 0.8rem 4rem 0.8rem;
+  border-radius: 0.25rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 375px) {
+  body {
+    max-width: 100%;
+    width: 100%;
+  }
+  body #main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  body #main-container #home {
+    height: 70vh !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    background-image: url("../img/estagio/1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: bottom !important;
+  }
+  body #main-container #home header {
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main-container #home header #logo-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: default;
+    align-items: center;
+  }
+  body #main-container #home header #simpleLogo {
+    height: 80% !important;
+  }
+  body #main-container #home header #textLogo {
+    display: none;
+  }
+  body #main-container #home header nav button {
+    display: none;
+  }
+  body #main-container #home header nav ul li {
+    display: none;
+  }
+  body #main-container #home header .menu-button-container {
+    display: flex !important;
+  }
+  body #main-container #home header .menu-button, body #main-container #home header .menu-button::before, body #main-container #home header .menu-button::after {
+    display: flex !important;
+  }
+  body #main-container #home #description-banner {
+    width: 100% !important;
+  }
+  body #main-container #home #description-banner h1 {
+    font-size: 1.6rem !important;
+    margin: 3rem 0rem 0rem 0rem !important;
+    line-height: 2rem;
+  }
+  body #main-container #home #description-banner h3 {
+    font-size: 0.8rem !important;
+    margin: 2rem 0rem !important;
+    line-height: 2rem;
+  }
+  body #main-container #home #description-banner a {
+    font-size: 0.8rem !important;
+  }
+  body #main-container #home #description-banner #button-banner button {
+    width: 100px;
+    height: 40px !important;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  body #main-container #about-internship {
+    background: #ccc;
+  }
+  body #main-container #about-internship-frame h2 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  body #main-container #about-internship-frame-subtitle {
+    display: none;
+  }
+  body #main-container #about-internship-frame h3 {
+    text-align: center;
+  }
+  body #main-container #about-internship-frame p span {
+    font-style: italic;
+    font-weight: 700;
+  }
+  body #main-container #about-internship-frame p::after {
+    border-bottom: 1px solid red !important;
+  }
+}/*# sourceMappingURL=index.css.map */

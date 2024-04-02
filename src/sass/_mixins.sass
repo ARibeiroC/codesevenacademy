@@ -7,9 +7,11 @@
     font-family: $font
 
 
-@mixin flex($orientation: row)
+@mixin flex($orientation: row, $wrap: no-wrap)
     display: flex
     flex-direction: $orientation
+    flex-wrap: $wrap
+
 
 @mixin padding($top-bottom: 0, $left-right: 0)
     padding: $top-bottom $left-right
@@ -27,12 +29,9 @@
     border-radius: $radius
 
 
-
-
 // Reset list style
 @mixin reset-list
     list-style: none    
-
 
 
 
@@ -87,8 +86,6 @@
     &:active
         @include box-shadow-inset(2px, 2px, 5px, 0px, $color-default, inset)
         margin-top: 2px
-
-
 
 
 @mixin background-image($url, $size: cover, $pos: center, $repeat: no-repeat)

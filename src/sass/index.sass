@@ -43,11 +43,18 @@ body
 
 
             #home
-                @include background-image('../img/estagio/1.jpeg', 100%, top)
+                // @include background-image('../img/estagio/1.jpeg', 100%, top)
                 background-attachment: fixed
                 @include size-object(100vh)
+                position: relative
+                overflow-y: hidden
+
+                video 
+                    position: absolute
+                    width: 100%
         
                 header
+                    position: relative
                     @include flex
                     @include align-items(center, center)
                     background: rgba(0, 0, 0, .7)
@@ -125,10 +132,11 @@ body
 
 
                 #frame-banner
+                    position: relative
                     @include flex
                     background: rgba(0, 0, 0, .7)
                     @include align-items(center)
-                    @include size-object(90%, 100%)
+                    @include size-object(97.5%, 100%)
                     // @include centralization
                     @include padding(.4rem .8rem)           
 
@@ -168,30 +176,60 @@ body
 
             #about-internship
                 @include padding(.4rem .8rem)
-                background: $color-ice url(../img/simpleLogoPurple.png) no-repeat fixed center
+                background-color: $color-ice
+                background-image: url(../img/simpleLogoPurple.png)
+                background-repeat: no-repeat
+                background-attachment: fixed
+                background-position: center 
                 background-blend-mode: color-dodge
-                background-size: 35%
+                background-size: 45%
 
-                #frame-internship
+                #about-internship-frame
                     @include flex(column)
-                    gap: 1rem
+                    @include padding(.4rem, .8rem 4rem .8rem)
+                    // gap: 1rem
 
                     h3
                         flex: 0
-                        margin: 0rem 0rem 1rem 0
+                        margin: 1rem 0rem
                         font-size: 1.4rem
                         text-align: justify
 
-                    // #about-cfi
+                    p
+                        line-height: 1.6rem
+                        text-align: justify
+
+                    .frame-ask
+
+                        
+
+                    .warning
+                        @include b-radius
+                        margin: 1rem
+                        box-shadow: 2px 2px 2px $color-darkgray
+                        border: 1px solid $color-darkgray
+                        @include padding(1rem, 1rem)
+                        background-color: $color-warning
+                        
                     
             
             #prerequisites
                 @include padding(.4rem, .8rem 4rem .8rem)
-                background: $color-purple
+                background: $color-darkblue
+                margin: 1rem
                 color: $color-ice
                 @include b-radius
 
+                
+                ul
+                    list-style: square
+                    padding: 1rem
+                    line-height: 1.5rem
+                
+                
+
             #application-form
+                margin: 1rem
                 @include flex
                 @include b-radius
                 background: url('../img/estagio/form.jpg') no-repeat fixed top
@@ -203,6 +241,25 @@ body
                     @include padding(.4rem, .8rem 4rem .8rem)
                     @include b-radius
                     background: rgba(0, 0, 0, .7)
+
+                    h2, h3
+                        text-align: center
+
+                    form
+                        @include flex(column)
+                        margin: 0 auto
+                        width: 50%
+
+
+                        .small-input
+                            width: 150px
+                        
+                        .middle-input
+                            width: 300px
+                        
+                        .larger-input
+                            width: 100%
+
 
 
 
@@ -220,7 +277,6 @@ body
             @include main-content(100%)
 
             #home
-                border: 1px solid red
                 height: 70vh !important
                 @include flex(column)
                 @include background-image('../img/estagio/1.jpeg')
@@ -260,7 +316,7 @@ body
                     width: 100% !important
                     h1
                         font-size: 1.6rem !important
-                        margin: 1rem 0rem 0rem 0rem !important
+                        margin: 3rem 0rem 0rem 0rem !important
                         line-height: 2rem
 
                     h3
@@ -274,6 +330,30 @@ body
                     #button-banner
                         button
                             @include size-object(40px !important, 100px)
+
+
+            #about-internship
+                background: $color-lightgray
+                &-frame
+                    h2
+                        text-align: center
+                        margin: 1rem 0
+                
+                    &-subtitle
+                        display: none
+
+                    h3
+                        text-align: center
+
+                    p span
+                        font-style: italic
+                        font-weight: 700
+
+                    p::after
+                        border-bottom: 1px solid red !important
+
+
+
 
 
 // @media (max-width: 425px)

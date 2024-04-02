@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #f7f7f7;
+  background: #f0f0f0;
 }
 body a {
   color: #D70AC1;
@@ -36,21 +36,26 @@ body section {
 body #main-container #content {
   display: flex;
   flex-direction: column;
+  flex-wrap: no-wrap;
 }
 body #main-container #content #home {
-  background-image: url("../img/estagio/1.jpeg");
-  background-size: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
+  position: relative;
+  overflow-y: hidden;
+}
+body #main-container #content #home video {
+  position: absolute;
+  width: 100%;
 }
 body #main-container #content #home header {
+  position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
@@ -69,12 +74,14 @@ body #main-container #content #home header #logo-area img {
 body #main-container #content #home header #header-menu {
   display: flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   gap: 1rem;
 }
 body #main-container #content #home header #header-menu ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   gap: 0.75rem;
 }
 body #main-container #content #home header #header-menu ul a {
@@ -83,7 +90,7 @@ body #main-container #content #home header #header-menu ul a {
   font-weight: bold;
 }
 body #main-container #content #home header #header-menu ul a {
-  color: #f7f7f7;
+  color: #f0f0f0;
 }
 body #main-container #content #home header #header-menu ul a:hover {
   color: #D70AC1;
@@ -91,7 +98,7 @@ body #main-container #content #home header #header-menu ul a:hover {
 body #main-container #content #home header #header-menu button {
   padding: 0.6rem;
   background-color: #D70AC1;
-  color: #f7f7f7;
+  color: #f0f0f0;
   font-weight: 900;
   cursor: pointer;
   border-radius: 0.25rem;
@@ -119,7 +126,7 @@ body #main-container #content #home header #menu-toggle-content .menu-button-con
 }
 body #main-container #content #home header #menu-toggle-content .menu-button, body #main-container #content #home header #menu-toggle-content .menu-button::before, body #main-container #content #home header #menu-toggle-content .menu-button::after {
   display: none;
-  background-color: #f7f7f7;
+  background-color: #f0f0f0;
   position: absolute;
   height: 4px;
   width: 30px;
@@ -147,13 +154,15 @@ body #main-container #content #home header #menu-toggle-content #menu-toggle:che
   transform: rotate(-405deg);
 }
 body #main-container #content #home #frame-banner {
+  position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 90%;
+  height: 97.5%;
   max-width: 100%;
   max-height: 100%;
   padding: 0.4rem 0.8rem 0;
@@ -161,13 +170,14 @@ body #main-container #content #home #frame-banner {
 body #main-container #content #home #frame-banner #description-banner {
   display: flex;
   flex-direction: column;
+  flex-wrap: no-wrap;
   justify-content: flex-start;
   align-items: center;
   width: 80%;
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  color: #f7f7f7;
+  color: #f0f0f0;
 }
 body #main-container #content #home #frame-banner #description-banner h1 {
   flex: 1;
@@ -187,6 +197,7 @@ body #main-container #content #home #frame-banner #description-banner a {
 body #main-container #content #home #frame-banner #description-banner #button-banner {
   display: flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
   width: 80%;
@@ -197,7 +208,7 @@ body #main-container #content #home #frame-banner #description-banner #button-ba
 body #main-container #content #home #frame-banner #description-banner #button-banner button {
   padding: 0.6rem;
   background-color: #D70AC1;
-  color: #f7f7f7;
+  color: #f0f0f0;
   font-weight: 700;
   cursor: pointer;
   border: 0 transparent none;
@@ -213,40 +224,84 @@ body #main-container #content #home #frame-banner #description-banner #button-ba
 }
 body #main-container #content #about-internship {
   padding: 0.4rem 0.8rem 0;
-  background: #f7f7f7 url(../img/simpleLogoPurple.png) no-repeat fixed center;
+  background-color: #f0f0f0;
+  background-image: url(../img/simpleLogoPurple.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-blend-mode: color-dodge;
-  background-size: 35%;
+  background-size: 45%;
 }
-body #main-container #content #about-internship #frame-internship {
+body #main-container #content #about-internship #about-internship-frame {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  flex-wrap: no-wrap;
+  padding: 0.4rem 0.8rem 4rem 0.8rem;
 }
-body #main-container #content #about-internship #frame-internship h3 {
+body #main-container #content #about-internship #about-internship-frame h3 {
   flex: 0;
-  margin: 0rem 0rem 1rem 0;
+  margin: 1rem 0rem;
   font-size: 1.4rem;
   text-align: justify;
 }
+body #main-container #content #about-internship #about-internship-frame p {
+  line-height: 1.6rem;
+  text-align: justify;
+}
+body #main-container #content #about-internship #about-internship-frame .warning {
+  border-radius: 0.25rem;
+  margin: 1rem;
+  box-shadow: 2px 2px 2px #222;
+  border: 1px solid #222;
+  padding: 1rem 1rem;
+  background-color: #FFF3CD;
+}
 body #main-container #content #prerequisites {
   padding: 0.4rem 0.8rem 4rem 0.8rem;
-  background: #5C0BA3;
-  color: #f7f7f7;
+  background: #110e2d;
+  margin: 1rem;
+  color: #f0f0f0;
   border-radius: 0.25rem;
 }
+body #main-container #content #prerequisites ul {
+  list-style: square;
+  padding: 1rem;
+  line-height: 1.5rem;
+}
 body #main-container #content #application-form {
+  margin: 1rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   border-radius: 0.25rem;
   background: url("../img/estagio/form.jpg") no-repeat fixed top;
   background-size: cover;
-  color: #f7f7f7;
+  color: #f0f0f0;
   height: 100vh;
 }
 body #main-container #content #application-form #filter-background {
   padding: 0.4rem 0.8rem 4rem 0.8rem;
   border-radius: 0.25rem;
   background: rgba(0, 0, 0, 0.7);
+}
+body #main-container #content #application-form #filter-background h2, body #main-container #content #application-form #filter-background h3 {
+  text-align: center;
+}
+body #main-container #content #application-form #filter-background form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  margin: 0 auto;
+  width: 50%;
+}
+body #main-container #content #application-form #filter-background form .small-input {
+  width: 150px;
+}
+body #main-container #content #application-form #filter-background form .middle-input {
+  width: 300px;
+}
+body #main-container #content #application-form #filter-background form .larger-input {
+  width: 100%;
 }
 
 @media (max-width: 375px) {
@@ -257,14 +312,15 @@ body #main-container #content #application-form #filter-background {
   body #main-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: no-wrap;
     margin: 0 auto;
     max-width: 100%;
   }
   body #main-container #home {
-    border: 1px solid red;
     height: 70vh !important;
     display: flex;
     flex-direction: column;
+    flex-wrap: no-wrap;
     background-image: url("../img/estagio/1.jpeg");
     background-size: cover;
     background-position: center;
@@ -285,6 +341,7 @@ body #main-container #content #application-form #filter-background {
   body #main-container #home header #logo-area {
     display: flex;
     flex-direction: row;
+    flex-wrap: no-wrap;
     justify-content: default;
     align-items: center;
   }
@@ -311,7 +368,7 @@ body #main-container #content #application-form #filter-background {
   }
   body #main-container #home #description-banner h1 {
     font-size: 1.6rem !important;
-    margin: 1rem 0rem 0rem 0rem !important;
+    margin: 3rem 0rem 0rem 0rem !important;
     line-height: 2rem;
   }
   body #main-container #home #description-banner h3 {
@@ -327,6 +384,26 @@ body #main-container #content #application-form #filter-background {
     height: 40px !important;
     max-width: 100%;
     max-height: 100%;
+  }
+  body #main-container #about-internship {
+    background: #ccc;
+  }
+  body #main-container #about-internship-frame h2 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  body #main-container #about-internship-frame-subtitle {
+    display: none;
+  }
+  body #main-container #about-internship-frame h3 {
+    text-align: center;
+  }
+  body #main-container #about-internship-frame p span {
+    font-style: italic;
+    font-weight: 700;
+  }
+  body #main-container #about-internship-frame p::after {
+    border-bottom: 1px solid red !important;
   }
 }
 
