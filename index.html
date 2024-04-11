@@ -54,8 +54,7 @@
                     <div id="description-banner">
                         <h1 class="title">Faça parte do nosso projeto de formação de instrutor</h1>
                         <h3>O curso de formação de instrutor é uma oportunidade para você agregar conhecimento e valor ao seu currículo.</h3>
-
-                        <div id="button-banner">
+                        <div id="button-area">
                             <button>Saiba Mais</button>
                         </div>
                     </div>
@@ -116,73 +115,87 @@
                     <h2>Formuário de Inscrição</h2>
                     <h3>Cursos de formação de Instrutures - CFI</h3>
                     <form>
-                        <div>
-                            <label for="registration">Matricula</label>
-                            <input type="text" name="registration" id="registration" class="middle-input" placeholder="Ex: 009999">
-                        </div>
-                        <div>
-                            <label for="responsible-name">Nome do responsável</label>
-                            <input type="text" name="responsible-name" id="responsible-name" placeholder="Ex: Pedro Luiz Carvalho de Souza">
-                        </div>
-                        <div>
-                            <label for="first-name">Primeiro nome</label>
-                            <input type="text" name="first-name" id="first-name" placeholder="Ex: João">
-                        </div>
-                        <div>
-                            <label for="surnames">Sobrenomes</label>
-                            <input type="text" name="surnames" id="surnames" placeholder="Ex: da Silva Requião">
-                        </div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input type="text" name="email" id="email" placeholder="Ex: alunos@gmail.com">
-                        </div>
-                        <div>
-                            <label for="celphone-number">Celular</label>
-                            <input type="tel" name="celphone-number" id="celphone-number" placeholder="(11) 00000-0000">
-                        </div>
-                        <div>
-                            <label for="current-module">Módulo atual</label>
-                            <input type="tel" name="current-module" id="current-module" placeholder="Ex: Excel">
-                        </div>
-
-                        <fieldset id="validate-application-form">
-                            <h3>Para validar sua inscrição é preciso responder a este questionário</h3>
-                            
-                            <p>Este questionário tem como objetivo verificar se todos os pré-requisitos foram atendidos</p>
-
-                            <div id="validate-ask-1">
-                                <h4>1 - Selecione os módulos que você possui pelo menos conhecimento básico</h4>
-                                <input type="checkbox" name="introducao-informatica" id="introducao-informatica" value="introducao-informatica"><label for="introducao-informatica">Introdução à Informática</label>
-                                <input type="checkbox" name="windows10" id="windows10"><label for="windows10" value="windows10">Windows 10</label>
-                                <input type="checkbox" name="normas-abnt" id="normas-abnt"><label for="normas-abnt" value="normas-abnt">Normas ABNT</label>
-                                <input type="checkbox" name="word-2016" id="word-2016"><label for="word-2016" value="word-2016">Microsoft Office Word 2016</label>
-                                <input type="checkbox" name="excel-2016" id="excel-2016"><label for="excel-2016" value="excel-2016">Microsoft Office Excel 2016</label>
-                                <input type="checkbox" name="powerpoint-2016" id="powerpoint-2016"><label for="powerpoint-2016" value="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
+                        <div id="form-inscricao">
+                            <div id="container-student-data" class="div-setup" >
+                                <div id="container-info">
+                                    <div id="container-registration">
+                                        <label for="registration">Matricula</label>
+                                        <input type="text" name="registration" id="registration" class="small-input input-setup" placeholder="Ex: 009999">
+                                    </div>
+                                    <div class="div-setup" id="container-responsible">
+                                        <label for="responsible-name">
+                                            Nome do responsável
+                                            <i class="fa-solid fa-circle-info"></i>
+                                        </label>
+                                        
+                                        <input type="text" name="responsible-name" id="responsible-name" class="full-input input-setup" placeholder="Ex: Pedro Luiz Carvalho de Souza">
+                                    </div>
+                                    <div id="first-name">
+                                        <label for="first-name">Primeiro nome</label>
+                                        <input type="text" name="first-name" id="first-name" class="middle-input input-setup" placeholder="Ex: João">
+                                    </div>
+                                    <div id="container-surnames">
+                                        <label for="surnames">Sobrenomes</label>
+                                        <input type="text" name="surnames" id="surnames" class="larger-input input-setup" placeholder="Ex: da Silva Requião">
+                                    </div>
+                                    <div class="div-setup" id="container-current-module">
+                                        <label for="current-module">
+                                            Módulo atual
+                                            <i class="fa-solid fa-circle-info"></i>
+                                        </label>
+                                        <input type="tel" name="current-module" id="current-module" class="larger-input input-setup" placeholder="Ex: Excel">
+                                    </div>
+                                    <div class="div-setup" id="container-celphone">
+                                        <label for="celphone-number">Celular</label>
+                                        <input type="tel" name="celphone-number" id="celphone-number" class="middle-input input-setup" placeholder="(11) 00000-0000">
+                                    </div>
+                                    <div class="div-setup" id="container-email">
+                                        <label for="email">E-mail</label>
+                                        <input type="text" name="email" id="email" class="larger-input input-setup"  placeholder="Ex: alunos@gmail.com">
+                                    </div>
+                                </div>
                             </div>
-                            <div id="validate-ask-2">
-                                <h4 for="date-birth">2 - Qual sua data de nascimento?</h4>
-                                <input type="text" name="date-birth" id="date-birth">
-                            </div>
-                            <div id="description-reason">
-                                <h4>3 - Descreva o motivo pelo qual gostaria de ser um estagiátio</h4>
-                                <input type="text" name="input-description-reason" id="input-description-reason" placeholder="EX: Gostaria de participar porque quero ampliar meus conhecimentos e ser um profissional diferenciado...">
-                            </div>
-                            <div id="rules">
-                                <h4>4 - Leia as regras do estágio</h4>
-                                <a href="#">Regras do estágio</a>
-                            </div>
-                            <div id="rules">
-                                <input type="checkbox" name="rules-check" id="rules-check" valeu="Aceito">
-                                <label>5 - Li e aceito os termos para ser um estagiário.</label>                            
-                            </div>
-                            <div id="profile-review">
-                                <input type="checkbox" name="term-accept" id="term-accept" value="aceito">
-                                <label for="term-accept">
-                                    Estou ciente que ao inscrever-me no Curso de formação de instrutores (CFI), minhas condutas dentro e fora da instituição estão sujeitas a análise e que terão um peso fundamenta para o meu perfil de candidato.
-                                </label>
-                            </div>
-                        </fieldset>
-                        <button type="button">Finalizar Inscrição</button>
+    
+                            <fieldset id="validate-application-form">
+                                <h3>Para validar sua inscrição é preciso responder a este questionário</h3>
+                                
+                                <p>Este questionário tem como objetivo verificar se todos os pré-requisitos foram atendidos</p>
+    
+                                <div class="ask-checkbox">
+                                    <h4>1 - Selecione os módulos que você possui pelo menos conhecimento básico</h4>
+                                    <div id="input-area">
+                                        <input type="checkbox" name="introducao-informatica" id="introducao-informatica" value="introducao-informatica"><label for="introducao-informatica">Introdução à Informática</label>
+                                        <input type="checkbox" name="windows10" id="windows10"><label for="windows10" value="windows10">Windows 10</label>
+                                        <input type="checkbox" name="normas-abnt" id="normas-abnt"><label for="normas-abnt" value="normas-abnt">Normas ABNT</label>
+                                        <input type="checkbox" name="word-2016" id="word-2016"><label for="word-2016" value="word-2016">Microsoft Office Word 2016</label>
+                                        <input type="checkbox" name="excel-2016" id="excel-2016"><label for="excel-2016" value="excel-2016">Microsoft Office Excel 2016</label>
+                                        <input type="checkbox" name="powerpoint-2016" id="powerpoint-2016"><label for="powerpoint-2016" value="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
+                                    </div>
+                                </div>
+                                <div class="ask-simple">
+                                    <h4 for="date-birth">2 - Qual sua data de nascimento?</h4>
+                                    <input type="text" name="date-birth" id="date-birth" class="input-setup">
+                                </div>
+                                <div class="ask-simple">
+                                    <h4>3 - Descreva o motivo pelo qual gostaria de ser um estagiátio</h4>
+                                    <textarea name="input-description-reason" id="input-description-reason" cols="30" rows="10" placeholder="EX: Gostaria de participar porque quero ampliar meus conhecimentos e ser um profissional diferenciado..." class="input-setup"></textarea>
+                                </div>
+                                <div id="rules">
+                                    <h4>4 - Leia as <a href="#">Regras do estágio</a></h4>                                    
+                                    <div>
+                                        <input type="checkbox" name="rules-check" id="rules-check" valeu="Aceito">
+                                        <label>Li e aceito os termos.</label>
+                                    </div>                           
+                                    <div>
+                                        <input type="checkbox" name="term-accept" id="term-accept" value="aceito">
+                                        <label for="term-accept">
+                                            Estou ciente que ao inscrever-me no Curso de formação de instrutores (CFI), minhas condutas dentro e fora da instituição estão sujeitas a análise e que terão um peso fundamenta para o meu perfil de candidato.
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button type="button">Finalizar Inscrição</button>
+                        </div>
                     </form>
                 </div>
             </section>

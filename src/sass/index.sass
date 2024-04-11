@@ -41,27 +41,40 @@ body
             @include flex(column)
             // @include main-content(1440px)
 
+            #home::after
+                content: ''
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                background: rgba(0, 0, 0, .7)
+                border: 1px solid white
+                z-index: 1
 
             #home
-                // @include background-image('../img/estagio/1.jpeg', 100%, top)
                 background-attachment: fixed
                 @include size-object(100vh)
                 position: relative
-                overflow-y: hidden
+                overflow: hidden
+                z-index: 4
+                border: 1px solid purple
 
                 video 
                     position: absolute
                     width: 100%
+                    z-index: 0
         
                 header
                     position: relative
                     @include flex
                     @include align-items(center, center)
-                    background: rgba(0, 0, 0, .7)
+                    // background: rgba(0, 0, 0, .7)
                     @include padding(.4rem .8rem)
                     height: 10%
                     widows: 100%
                     margin: 0 auto
+                    z-index: 4
+                    // border: 1px solid red
 
                     #logo-area
                         padding: .6rem
@@ -74,14 +87,22 @@ body
                     #header-menu
                         @include flex
                         gap: 1rem
+                        @include align-items(center, center)
+                        
+
 
                         ul
                             @include h-menu($color-ice, $color-pink)
 
+
                         button
-                            @include style-button($color-pink, $color-ice, 900)
                             @include b-radius
-                            @include style-border(2px, transparent)
+                            @include size-object(40px, 150px)
+                            @include style-border(0px, transparent, none)
+                            @include style-button($color-pink, $color-ice, 700)
+
+                        button:active
+                            transform: translateY(.1rem)
                         
                     // Hamburger Menu
                     #menu-toggle-content
@@ -134,44 +155,51 @@ body
                 #frame-banner
                     position: relative
                     @include flex
-                    background: rgba(0, 0, 0, .7)
-                    @include align-items(center)
-                    @include size-object(97.5%, 100%)
-                    // @include centralization
-                    @include padding(.4rem .8rem)           
+                    @include size-object(97.5%, 80%)
+                    @include align-items(center, flex-start)
+                    @include centralization
+                    @include padding(.4rem .8rem)
+                    z-index: 4      
 
 
                     #description-banner
                         @include flex(column)
-                        @include align-items(flex-start, center)
                         @include size-object(auto, 80%)
+                        @include align-items(center, center)
                         color: $color-ice
+                        height: 90%
 
-                        h1
-                            flex: 1
-                            margin: 4rem 0rem 0rem 0rem
+                        h1  
+                            @include flex
+                            @include align-items(center, center)
+                            flex: .7
+                            // margin: 4rem 0rem 0rem 0rem
                             font-size: 3rem
                             text-align: center
 
                         h3
-                            flex: 1
-                            margin: 6rem 0rem
+                            @include flex
+                            @include align-items(center, center)
+                            flex: .5
+                            // margin: 6rem 0rem
                             font-size: 1.4rem
                             text-align: center
 
-                        a
-                            font-size: 1rem
-
-                        #button-banner
+                        #button-area
                             @include flex
                             @include align-items(center, center)
-                            @include size-object(auto, 80%)
+                            height: 60px
+                            flex: .8
 
-                            button 
+                            & button
+                                // margin: .6rem
                                 @include style-button($color-pink, $color-ice, 700)
                                 @include style-border(0, transparent, none)
-                                @include size-object(50px, 150px)
-                                @include b-radius
+                                @include size-object(45px, 150px)
+
+                            & button:active
+                                transform: translateY(.1rem)
+
 
 
             #about-internship
@@ -199,10 +227,6 @@ body
                         line-height: 1.6rem
                         text-align: justify
 
-                    .frame-ask
-
-                        
-
                     .warning
                         @include b-radius
                         margin: 1rem
@@ -225,8 +249,7 @@ body
                     list-style: square
                     padding: 1rem
                     line-height: 1.5rem
-                
-                
+                                
 
             #application-form
                 margin: 1rem
@@ -235,7 +258,7 @@ body
                 background: url('../img/estagio/form.jpg') no-repeat fixed top
                 background-size: cover
                 color: $color-ice
-                height: 100vh
+                height: auto
 
                 #filter-background
                     @include padding(.4rem, .8rem 4rem .8rem)
@@ -245,20 +268,190 @@ body
                     h2, h3
                         text-align: center
 
+
                     form
-                        @include flex(column)
+                        border: 1px solid purple
                         margin: 0 auto
+                        width: 75%
+                        background: rgba(255, 255, 255, .1)
+                        backdrop-filter: blur(5px)
+                        border: 1px solid
+                        border-radius: 15px
                         width: 50%
 
+                        input
+                            outline: none
+                            @include b-radius(5px)
 
-                        .small-input
-                            width: 150px
+                        #form-inscricao
+                            @include flex(column)
+                            @include padding(1rem, .6rem)
+                            gap: .2rem
+                            position: relative
+
+                                
+
+                            #container-student-data
+                                @include flex(column)
+                                gap: .4rem
+                                
+                                #container-registration
+                                    width: 100px
+
+                                #container-info
+                                    @include flex(row, wrap)
+                                    gap: .4rem
+
+                                    #container-responsible
+                                        width: 350px
+                                        position: relative
+                                    
+
+                                        & label i
+                                            position: relative
+
+                                        & label i::after
+                                            pointer-events: none
+                                            text-align: justify
+                                            content: 'Neste campo, deve-se preencher o nome do responsável pelo contrato do curso.'
+                                            opacity: 0
+                                            position: absolute
+                                            background: $color-warning
+                                            color: $color-darkgray
+                                            width: 300px
+                                            left: 110%
+                                            top: -190%
+                                            padding: .6rem
+                                            border-radius: 8px
+                                            transition: .4s
+                                            font-size: .7rem
+                                            font-family: "Helvetica", sans-serif
+                                        
+                                        & label i:hover::after
+                                            opacity: 1
+
+
+                                    #container-current-module
+                                        width: 300px
+
+                                        & label i
+                                            position: relative
+
+                                        & label i::after
+                                            transition: .4s
+                                            text-align: justify
+                                            content: 'Qual o módulo do curso você esta atualmente aprendendo?'
+                                            position: absolute
+                                            opacity: 0
+                                            background: $color-warning
+                                            color: $color-darkgray
+                                            width: 300px
+                                            left: 110%
+                                            top: -190%
+                                            padding: .6rem
+                                            border-radius: 8px
+                                            font-family: "Helvetica"
+                                            font-size: .7rem
+
+                                        & label i:hover::after
+                                            opacity: 1
+
+                                    #container-email
+                                        width: 250px
+
+                                    #first-name
+                                        width: 200px
+
+                                    #container-surnames
+                                        width: 350px
+
+                                    #container-celphone
+                                        width: 150px
+
+
+
+                            #registration, #celphone-number
+                                text-align: right
                         
-                        .middle-input
-                            width: 300px
-                        
-                        .larger-input
-                            width: 100%
+                    
+
+                            .input-setup
+                                padding: .4rem
+                                margin: .25rem 0
+                                @include flex(column)
+                                height: 35px
+                                width: 100%
+
+                            
+
+                            .div-setup
+                                @include flex(column)
+
+                            #validate-application-form
+                                margin: 1rem 0
+                                padding: .6rem
+                                line-height: 1.5rem
+                                border: none
+
+                                h3
+                                    margin: 1rem 0
+
+                                & p
+                                    margin: 1rem 0
+
+                                .ask-checkbox
+                                    h4
+
+                                    #input-area
+                                        width: 100%
+                                        margin-left: .8rem
+
+                                    & input, label
+                                        margin-right: 0.6rem
+
+                                .ask-simple
+                                    & input
+                                        margin-left: .6rem
+
+
+                                & h4
+                                    margin-bottom: .2rem
+                                
+                                & input
+                                    margin-bottom: 1rem
+
+                                #date-birth
+                                    width: 95%
+
+                                #input-description-reason
+                                    height: 120px
+                                    resize: none
+                                    margin-left: .6rem
+                                    width: 95%
+
+                                #rules
+                                    @include flex(column)
+                                    & input 
+                                        margin: .6rem
+
+                            button
+                                @include style-button($color-pink, $color-ice, 700)
+                                @include style-border(0, transparent, none)
+                                @include size-object(45px, 250px)
+                                margin: 0 auto
+
+                                    
+
+
+                                    
+
+                
+                            
+
+
+
+
+                    
 
 
 
