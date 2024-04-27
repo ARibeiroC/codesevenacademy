@@ -32,12 +32,13 @@ body ul {
   list-style: none;
 }
 body section {
-  margin-bottom: 1rem;
+  height: auto;
 }
 body #main-container #content {
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
+  width: 100%;
 }
 body #main-container #content #home::after {
   content: "";
@@ -46,22 +47,24 @@ body #main-container #content #home::after {
   position: absolute;
   top: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  border-radius: 5px;
+  z-index: 0;
 }
 body #main-container #content #home {
   background-attachment: fixed;
-  width: 100%;
   height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
   position: relative;
   overflow: hidden;
-  z-index: 4;
+  border-radius: 0.25rem;
 }
-body #main-container #content #home video {
+body #main-container #content #home #video-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: initial;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  width: 100%;
-  z-index: 0;
+  height: 100%;
 }
 body #main-container #content #home header {
   position: relative;
@@ -74,7 +77,7 @@ body #main-container #content #home header {
   height: 10%;
   widows: 100%;
   margin: 0 auto;
-  z-index: 4;
+  z-index: 2;
 }
 body #main-container #content #home header #logo-area {
   padding: 0.6rem;
@@ -88,26 +91,24 @@ body #main-container #content #home header #header-menu {
   flex-direction: row;
   flex-wrap: initial;
   gap: 1rem;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  width: 1050px;
 }
 body #main-container #content #home header #header-menu ul {
-  list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: initial;
-  gap: 0.75rem;
-}
-body #main-container #content #home header #header-menu ul a {
-  padding: 1rem 0.4rem;
-  cursor: pointer;
+  gap: 1rem;
   font-weight: bold;
 }
 body #main-container #content #home header #header-menu ul a {
-  color: #f0f0f0;
+  border-bottom: 1px solid transparent;
 }
 body #main-container #content #home header #header-menu ul a:hover {
-  color: #D70AC1;
+  transition: 0.4s;
+  color: #f0f0f0;
+  border-bottom: 1px solid;
 }
 body #main-container #content #home header #header-menu button {
   border-radius: 0.25rem;
@@ -131,12 +132,16 @@ body #main-container #content #home header #header-menu button:active {
 }
 body #main-container #content #home header #menu-toggle-content {
   display: flex;
+  padding: 0.6rem;
+  display: none;
 }
 body #main-container #content #home header #menu-toggle-content #menu-toggle {
   display: none;
 }
 body #main-container #content #home header #menu-toggle-content .menu-button-container {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: initial;
   height: 100%;
   width: 30px;
   cursor: pointer;
@@ -146,7 +151,6 @@ body #main-container #content #home header #menu-toggle-content .menu-button-con
   padding: 1rem;
 }
 body #main-container #content #home header #menu-toggle-content .menu-button, body #main-container #content #home header #menu-toggle-content .menu-button::before, body #main-container #content #home header #menu-toggle-content .menu-button::after {
-  display: none;
   background-color: #f0f0f0;
   position: absolute;
   height: 4px;
@@ -187,7 +191,7 @@ body #main-container #content #home #frame-banner {
   align-items: flex-start;
   margin: 0 auto;
   padding: 0.4rem 0.8rem 0;
-  z-index: 4;
+  z-index: 1;
 }
 body #main-container #content #home #frame-banner #description-banner {
   display: flex;
@@ -307,29 +311,28 @@ body #main-container #content #application-form {
   color: #f0f0f0;
   height: auto;
 }
-body #main-container #content #application-form #filter-background {
+body #main-container #content #application-form #filter-aplication-form-background {
   padding: 0.4rem 0.8rem 4rem 0.8rem;
   border-radius: 0.25rem;
   background: rgba(0, 0, 0, 0.7);
 }
-body #main-container #content #application-form #filter-background h2, body #main-container #content #application-form #filter-background h3 {
+body #main-container #content #application-form #filter-aplication-form-background h2, body #main-container #content #application-form #filter-aplication-form-background h3 {
   text-align: center;
 }
-body #main-container #content #application-form #filter-background form {
+body #main-container #content #application-form #filter-aplication-form-background #form-body {
+  width: 50%;
   border: 1px solid purple;
   margin: 0 auto;
-  width: 75%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border: 1px solid;
   border-radius: 15px;
-  width: 50%;
 }
-body #main-container #content #application-form #filter-background form input {
+body #main-container #content #application-form #filter-aplication-form-background #form-body input {
   outline: none;
   border-radius: 5px;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao {
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
@@ -337,29 +340,19 @@ body #main-container #content #application-form #filter-background form #form-in
   gap: 0.2rem;
   position: relative;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info {
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
   gap: 0.4rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-registration {
-  width: 100px;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-responsible {
-  width: 350px;
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-responsible {
   position: relative;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-responsible label i {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-responsible label i {
   position: relative;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-responsible label i::after {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-responsible label i::after {
   pointer-events: none;
   text-align: justify;
   content: "Neste campo, deve-se preencher o nome do responsável pelo contrato do curso.";
@@ -367,25 +360,23 @@ body #main-container #content #application-form #filter-background form #form-in
   position: absolute;
   background: #FFF3CD;
   color: #222;
-  width: 300px;
   left: 110%;
   top: -190%;
+  width: 300px;
   padding: 0.6rem;
   border-radius: 8px;
   transition: 0.4s;
   font-size: 0.7rem;
   font-family: "Helvetica", sans-serif;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-responsible label i:hover::after {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-responsible label i:hover::after {
   opacity: 1;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-current-module {
-  width: 300px;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-current-module label i {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-current-module label i {
   position: relative;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-current-module label i::after {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-current-module label i::after {
+  pointer-events: none;
   transition: 0.4s;
   text-align: justify;
   content: "Qual o módulo do curso você esta atualmente aprendendo?";
@@ -401,25 +392,13 @@ body #main-container #content #application-form #filter-background form #form-in
   font-family: "Helvetica";
   font-size: 0.7rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-current-module label i:hover::after {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #container-info #container-current-module label i:hover::after {
   opacity: 1;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-email {
-  width: 250px;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #first-name {
-  width: 200px;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-surnames {
-  width: 350px;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #container-student-data #container-info #container-celphone {
-  width: 150px;
-}
-body #main-container #content #application-form #filter-background form #form-inscricao #registration, body #main-container #content #application-form #filter-background form #form-inscricao #celphone-number {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #matricula, body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #celphone-number {
   text-align: right;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao .input-setup {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao .input-setup {
   padding: 0.4rem;
   margin: 0.25rem 0;
   display: flex;
@@ -428,57 +407,57 @@ body #main-container #content #application-form #filter-background form #form-in
   height: 35px;
   width: 100%;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao .div-setup {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao .div-setup {
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form {
   margin: 1rem 0;
   padding: 0.6rem;
   line-height: 1.5rem;
   border: none;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form h3 {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form h3 {
   margin: 1rem 0;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form p {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form p {
   margin: 1rem 0;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form .ask-checkbox #input-area {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form .ask-checkbox #input-area {
   width: 100%;
   margin-left: 0.8rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form .ask-checkbox input, body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form .ask-checkbox label {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form .ask-checkbox input, body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form .ask-checkbox label {
   margin-right: 0.6rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form .ask-simple input {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form .ask-simple input {
   margin-left: 0.6rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form h4 {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form h4 {
   margin-bottom: 0.2rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form input, body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form textarea {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form input, body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form textarea {
   margin-bottom: 1rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form #date-birth {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form #date-birth {
   width: 95%;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form #input-description-reason {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form #input-description-reason {
   height: 120px;
   resize: none;
   margin-left: 0.6rem;
   width: 95%;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form #rules {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form #rules {
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao #validate-application-form #rules input {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao #validate-application-form #rules input {
   margin: 0.6rem;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao button {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao button {
   padding: 0.6rem;
   background-color: #D70AC1;
   color: #f0f0f0;
@@ -491,7 +470,7 @@ body #main-container #content #application-form #filter-background form #form-in
   max-height: 100%;
   margin: 0 auto;
 }
-body #main-container #content #application-form #filter-background form #form-inscricao button:active {
+body #main-container #content #application-form #filter-aplication-form-background #form-body #form-inscricao button:active {
   box-shadow: 2px 2px 6px 0px #111 inset;
   transform: translateY(0.1rem);
 }
@@ -528,6 +507,7 @@ body #main-container #footer #footer-info #footer-menu ul li {
   margin-bottom: 0.4rem;
 }
 body #main-container #footer #footer-info #footer-contacts {
+  display: none !important;
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
@@ -569,105 +549,106 @@ body #main-container #footer #copyright {
 }
 
 @media (max-width: 375px) {
-  body {
-    max-width: 100%;
-    width: 100%;
-  }
   body #main-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: initial;
-    margin: 0 auto;
-    max-width: 100%;
+    background: #5C0BA3;
   }
-  body #main-container #home {
-    height: 70vh !important;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: initial;
-    background-image: url("../img/estagio/1.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    background-position: bottom !important;
+  body #main-container #home #video-container {
+    display: none;
+    width: 100%;
   }
   body #main-container #home header {
     justify-content: space-between !important;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    justify-content: center;
-    align-items: center;
   }
-  body #main-container #home header #logo-area {
+  body #main-container #home header #logo-area #textLogo {
+    display: none;
+  }
+  body #main-container #home header #header-menu ul {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: initial;
+    padding: 0.4rem 0.4rem;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #5C0BA3;
+  }
+  body #main-container #home header #header-menu ul a {
     display: flex;
     flex-direction: row;
     flex-wrap: initial;
-    justify-content: default;
+    padding: 0.4rem 0.4rem;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 100%;
+    border: 1px solid white !important;
+    font-size: 2rem;
   }
-  body #main-container #home header #simpleLogo {
-    height: 80% !important;
-  }
-  body #main-container #home header #textLogo {
+  body #main-container #home header #header-menu button {
     display: none;
   }
-  body #main-container #home header nav button {
-    display: none;
+  body #main-container #home header #menu-toggle-content {
+    display: block !important;
   }
-  body #main-container #home header nav ul li {
-    display: none;
-  }
-  body #main-container #home header .menu-button-container {
-    display: flex !important;
-  }
-  body #main-container #home header .menu-button, body #main-container #home header .menu-button::before, body #main-container #home header .menu-button::after {
-    display: flex !important;
-  }
-  body #main-container #home #description-banner {
+  body #main-container #home #frame-banner {
     width: 100% !important;
   }
-  body #main-container #home #description-banner h1 {
-    font-size: 1.6rem !important;
-    margin: 3rem 0rem 0rem 0rem !important;
-    line-height: 2rem;
+  body #main-container #home #frame-banner #description-banner {
+    width: 100% !important;
   }
-  body #main-container #home #description-banner h3 {
-    font-size: 0.8rem !important;
-    margin: 2rem 0rem !important;
-    line-height: 2rem;
+  body #main-container #home #frame-banner #description-banner h1 {
+    font-size: 2rem !important;
+    color: #D70AC1;
   }
-  body #main-container #home #description-banner a {
-    font-size: 0.8rem !important;
+  body #main-container #home #frame-banner #description-banner h3 {
+    font-size: 1rem !important;
   }
-  body #main-container #home #description-banner #button-banner button {
-    width: 100px;
-    height: 40px !important;
-    max-width: 100%;
-    max-height: 100%;
+  body #main-container #filter-aplication-form-background {
+    width: 100%;
   }
-  body #main-container #about-internship {
-    background: #ccc;
+  body #main-container #filter-aplication-form-background #form-body {
+    width: 100% !important;
   }
-  body #main-container #about-internship-frame h2 {
-    text-align: center;
-    margin: 1rem 0;
+  body #main-container #filter-aplication-form-background #input-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
   }
-  body #main-container #about-internship-frame-subtitle {
-    display: none;
+  body #main-container #filter-aplication-form-background #container-responsible label i::after {
+    left: -170px !important;
+    top: -40px !important;
   }
-  body #main-container #about-internship-frame h3 {
-    text-align: center;
+  body #main-container #filter-aplication-form-background #container-current-module label i::after {
+    left: -110px !important;
+    top: -40px !important;
   }
-  body #main-container #about-internship-frame p span {
-    font-style: italic;
-    font-weight: 700;
+  body #main-container #footer {
+    border: 1px solid red;
   }
-  body #main-container #about-internship-frame p::after {
-    border-bottom: 1px solid red !important;
+}
+@media (max-width: 425px) {
+  #filter-aplication-form-background {
+    width: 100%;
+  }
+  #filter-aplication-form-background #form-body {
+    width: 100% !important;
+  }
+  #filter-aplication-form-background #input-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+  }
+  #filter-aplication-form-background #container-responsible label i::after {
+    left: -150px !important;
+    top: -40px !important;
+  }
+  #filter-aplication-form-background #container-current-module label i::after {
+    left: -80px !important;
+    top: -40px !important;
   }
 }
 

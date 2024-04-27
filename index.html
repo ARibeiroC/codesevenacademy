@@ -23,11 +23,12 @@
     <div id="main-container">
         <main id="content">
             <section id="home">
-                <video muted loop autoplay>
-                    <source src="src/video/bg25fps.mp4" type="video/mp4">
-                </video>    
+                <div id="video-container">
+                    <video muted loop autoplay>
+                        <source src="src/video/bg25fps.mp4" type="video/mp4">
+                    </video>    
+                </div>
                 <header>
-                    <!-- <div id="ribbon-header"></div> -->
                     <div id="logo-area">
                         <img id="simpleLogo" src="./src/img/simpleLogoWhite.png" alt="Logotipo Code Seven Simplificado">
                         <img id="textLogo" src="./src/img/textLogoWhite.png" alt="Texto do logotipo com o nome da Empresa">
@@ -39,12 +40,12 @@
                             <a href="#prerequisites"><li>PRÉ-REQUESITOS DO ESTÁGIO</li></a>
                             <a href="#events"><li>EVENTOS</li></a>
                             <a href="#application-form"><li>INSCRIÇÃO</li></a>
-                            <a href="#rodape"><li>CONTATOS</li></a>
+                            <a href="#footer"><li>CONTATOS</li></a>
                         </ul>
                         <button>ACESSE À PROVA</button>
                     </nav>
                     <div id="menu-toggle-content">
-                        <input id="menu-toggle" type="checkbox" />
+                        <input id="menu-toggle" type="checkbox"/>
                         <label class='menu-button-container' for="menu-toggle">
                             <div class='menu-button'> </div>
                         </label>
@@ -111,51 +112,48 @@
                 <p>Fique atento as data de aberturas para incrição no menu de <span><a href="#">Eventos</a></span> ou em nossa comunidade no <span><a href="https://discord.gg/qjAUtqNZS4">DISCORD</a></span>.</p>
             </section>
             <section id="application-form">
-                <div id="filter-background">
+                <div id="filter-aplication-form-background">
                     <h2>Formuário de Inscrição</h2>
                     <h3>Cursos de formação de Instrutures - CFI</h3>
-                    <form>
+                    <form id="form-body">
                         <div id="form-inscricao">
-                            <div id="container-student-data" class="div-setup" >
-                                <div id="container-info">
-                                    <div id="container-registration">
-                                        <label for="registration">Matricula</label>
-                                        <input type="text" name="registration" id="registration" class="small-input input-setup" placeholder="Ex: 009999">
-                                    </div>
-                                    <div class="div-setup" id="container-responsible">
-                                        <label for="responsible-name">
-                                            Nome do responsável
-                                            <i class="fa-solid fa-circle-info"></i>
-                                        </label>
-                                        
-                                        <input type="text" name="responsible-name" id="responsible-name" class="full-input input-setup" placeholder="Ex: Pedro Luiz Carvalho de Souza">
-                                    </div>
-                                    <div id="first-name">
-                                        <label for="first-name">Primeiro nome</label>
-                                        <input type="text" name="first-name" id="first-name" class="middle-input input-setup" placeholder="Ex: João">
-                                    </div>
-                                    <div id="container-surnames">
-                                        <label for="surnames">Sobrenomes</label>
-                                        <input type="text" name="surnames" id="surnames" class="larger-input input-setup" placeholder="Ex: da Silva Requião">
-                                    </div>
-                                    <div class="div-setup" id="container-current-module">
-                                        <label for="current-module">
-                                            Módulo atual
-                                            <i class="fa-solid fa-circle-info"></i>
-                                        </label>
-                                        <input type="tel" name="current-module" id="current-module" class="larger-input input-setup" placeholder="Ex: Excel">
-                                    </div>
-                                    <div class="div-setup" id="container-celphone">
-                                        <label for="celphone-number">Celular</label>
-                                        <input type="tel" name="celphone-number" id="celphone-number" class="middle-input input-setup" placeholder="(11) 00000-0000">
-                                    </div>
-                                    <div class="div-setup" id="container-email">
-                                        <label for="email">E-mail</label>
-                                        <input type="text" name="email" id="email" class="larger-input input-setup"  placeholder="Ex: alunos@gmail.com">
-                                    </div>
+                            <div id="container-info">
+                                <div id="container-matricula">
+                                    <label for="matricula">Matricula</label>
+                                    <input type="text" name="matricula" id="matricula" class="small-input input-setup" placeholder="Ex: 009999">
                                 </div>
-                            </div>
-    
+                                <div class="div-setup" id="container-responsible">
+                                    <label for="responsible-name">
+                                        Nome do responsável
+                                        <i class="fa-solid fa-circle-info"></i>
+                                    </label>
+                                    
+                                    <input type="text" name="responsible-name" id="responsible-name" class="full-input input-setup" placeholder="Ex: Pedro Luiz Carvalho de Souza">
+                                </div>
+                                <div id="first-name">
+                                    <label for="first-name">Primeiro nome</label>
+                                    <input type="text" name="first-name" id="first-name" class="middle-input input-setup" placeholder="Ex: João">
+                                </div>
+                                <div id="container-surnames">
+                                    <label for="surnames">Sobrenomes</label>
+                                    <input type="text" name="surnames" id="surnames" class="larger-input input-setup" placeholder="Ex: da Silva Requião">
+                                </div>
+                                <div class="div-setup" id="container-current-module">
+                                    <label for="current-module">
+                                        Módulo atual
+                                        <i class="fa-solid fa-circle-info"></i>
+                                    </label>
+                                    <input type="tel" name="current-module" id="current-module" class="larger-input input-setup" placeholder="Ex: Excel">
+                                </div>
+                                <div class="div-setup" id="container-celphone">
+                                    <label for="celphone-number">Celular</label>
+                                    <input type="tel" name="celphone-number" id="celphone-number" class="middle-input input-setup" placeholder="(11) 00000-0000">
+                                </div>
+                                <div class="div-setup" id="container-email">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" name="email" id="email" class="larger-input input-setup"  placeholder="Ex: alunos@gmail.com">
+                                </div>
+                            </div>    
                             <fieldset id="validate-application-form">
                                 <h3>Para validar sua inscrição é preciso responder a este questionário</h3>
                                 
@@ -164,12 +162,24 @@
                                 <div class="ask-checkbox">
                                     <h4>1 - Selecione os módulos que você possui pelo menos conhecimento básico</h4>
                                     <div id="input-area">
-                                        <input type="checkbox" name="introducao-informatica" id="introducao-informatica" value="introducao-informatica"><label for="introducao-informatica">Introdução à Informática</label>
-                                        <input type="checkbox" name="windows10" id="windows10"><label for="windows10" value="windows10">Windows 10</label>
-                                        <input type="checkbox" name="normas-abnt" id="normas-abnt"><label for="normas-abnt" value="normas-abnt">Normas ABNT</label>
-                                        <input type="checkbox" name="word-2016" id="word-2016"><label for="word-2016" value="word-2016">Microsoft Office Word 2016</label>
-                                        <input type="checkbox" name="excel-2016" id="excel-2016"><label for="excel-2016" value="excel-2016">Microsoft Office Excel 2016</label>
-                                        <input type="checkbox" name="powerpoint-2016" id="powerpoint-2016"><label for="powerpoint-2016" value="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
+                                        <div>
+                                            <input type="checkbox" name="introducao-informatica" id="introducao-informatica" value="introducao-informatica"><label for="introducao-informatica">Introdução à Informática</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="windows10" id="windows10"><label for="windows10" value="windows10">Windows 10</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="normas-abnt" id="normas-abnt"><label for="normas-abnt" value="normas-abnt">Normas ABNT</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="word-2016" id="word-2016"><label for="word-2016" value="word-2016">Microsoft Office Word 2016</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="excel-2016" id="excel-2016"><label for="excel-2016" value="excel-2016">Microsoft Office Excel 2016</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="powerpoint-2016" id="powerpoint-2016"><label for="powerpoint-2016" value="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="ask-simple">
@@ -210,7 +220,6 @@
                         <li><a href="#prerequisites">PRÉ-REQUESITOS DO ESTÁGIO</a></li>
                         <li><a href="#events">EVENTOS</a></li>
                         <li><a href="#application-form">INSCRIÇÃO</a></li>
-                        <li><a href="#rodape">CONTATOS</a></li>
                     </ul>
                 </div>
                 <div id="footer-contacts">
