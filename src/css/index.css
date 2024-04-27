@@ -651,5 +651,26 @@ body #main-container #footer #copyright {
     top: -40px !important;
   }
 }
+@media (max-width: 768px) {
+  #filter-aplication-form-background {
+    width: 100%;
+  }
+  #filter-aplication-form-background #form-body {
+    width: 100% !important;
+  }
+  #filter-aplication-form-background #input-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+  }
+  #filter-aplication-form-background #container-responsible label i::after {
+    left: -150px !important;
+    top: -40px !important;
+  }
+  #filter-aplication-form-background #container-current-module label i::after {
+    left: -80px !important;
+    top: -40px !important;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
