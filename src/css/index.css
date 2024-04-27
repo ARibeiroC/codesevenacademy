@@ -491,9 +491,10 @@ body #main-container #footer a:hover {
 body #main-container #footer #footer-info {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
   height: 100%;
 }
 body #main-container #footer #footer-info #footer-menu {
@@ -507,7 +508,6 @@ body #main-container #footer #footer-info #footer-menu ul li {
   margin-bottom: 0.4rem;
 }
 body #main-container #footer #footer-info #footer-contacts {
-  display: none !important;
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
@@ -622,8 +622,9 @@ body #main-container #footer #copyright {
     left: -110px !important;
     top: -40px !important;
   }
-  body #main-container #footer {
-    border: 1px solid red;
+  body #main-container #footer #copyright p {
+    text-align: center !important;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 425px) {
@@ -702,8 +703,8 @@ body #main-container #footer #copyright {
     top: -40px !important;
     font-size: 0.8rem !important;
   }
-  body #main-container #footer {
-    border: 1px solid red;
+  body #main-container #footer #copyright p {
+    text-align: center !important;
   }
 }
 @media (max-width: 768px) {
@@ -782,8 +783,8 @@ body #main-container #footer #copyright {
     top: -45px !important;
     font-size: 0.8rem !important;
   }
-  body #main-container #footer {
-    border: 1px solid red;
+  body #main-container #footer #copyright p {
+    text-align: center !important;
   }
 }
 
