@@ -706,5 +706,85 @@ body #main-container #footer #copyright {
     border: 1px solid red;
   }
 }
+@media (max-width: 768px) {
+  body #main-container #home #video-container {
+    width: 100%;
+  }
+  body #main-container #home header {
+    justify-content: space-between !important;
+    align-items: center;
+  }
+  body #main-container #home header #logo-area #textLogo {
+    display: none;
+  }
+  body #main-container #home header #header-menu ul {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: initial;
+    padding: 0.4rem 0.4rem;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #5C0BA3;
+  }
+  body #main-container #home header #header-menu ul a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: initial;
+    padding: 0.4rem 0.4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border: 1px solid white !important;
+    font-size: 2rem;
+  }
+  body #main-container #home header #header-menu button {
+    display: none;
+  }
+  body #main-container #home header #menu-toggle-content {
+    display: block !important;
+  }
+  body #main-container #home #frame-banner {
+    width: 100% !important;
+  }
+  body #main-container #home #frame-banner #description-banner {
+    width: 100% !important;
+  }
+  body #main-container #home #frame-banner #description-banner h1 {
+    font-size: 2.4rem !important;
+    color: #D70AC1;
+  }
+  body #main-container #home #frame-banner #description-banner h3 {
+    font-size: 1.2rem !important;
+  }
+  body #main-container #filter-aplication-form-background {
+    width: 100%;
+  }
+  body #main-container #filter-aplication-form-background #form-body {
+    width: 100% !important;
+  }
+  body #main-container #filter-aplication-form-background #input-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+  }
+  body #main-container #filter-aplication-form-background #container-responsible label i::after {
+    left: -170px !important;
+    top: -40px !important;
+    font-size: 0.8rem !important;
+  }
+  body #main-container #filter-aplication-form-background #container-current-module label i::after {
+    left: -110px !important;
+    top: -40px !important;
+    font-size: 0.8rem !important;
+  }
+  body #main-container #footer {
+    border: 1px solid red;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
