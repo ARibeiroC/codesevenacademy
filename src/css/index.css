@@ -137,10 +137,11 @@ body #main-container #content #home header #menu-toggle-content {
 }
 body #main-container #content #home header #menu-toggle-content #menu-toggle {
   display: none;
+  pointer-events: none;
 }
 body #main-container #content #home header #menu-toggle-content .menu-button-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: initial;
   height: 100%;
   width: 30px;
@@ -150,7 +151,7 @@ body #main-container #content #home header #menu-toggle-content .menu-button-con
   align-items: center;
   padding: 1rem;
 }
-body #main-container #content #home header #menu-toggle-content .menu-button, body #main-container #content #home header #menu-toggle-content .menu-button::before, body #main-container #content #home header #menu-toggle-content .menu-button::after {
+body #main-container #content #home header #menu-toggle-content .menu-button-container .menu-button-middle, body #main-container #content #home header #menu-toggle-content .menu-button-container .menu-button-top, body #main-container #content #home header #menu-toggle-content .menu-button-container .menu-button-bottom {
   background-color: #f0f0f0;
   position: absolute;
   height: 4px;
@@ -159,24 +160,11 @@ body #main-container #content #home header #menu-toggle-content .menu-button, bo
   border-radius: 2px;
   pointer-events: none;
 }
-body #main-container #content #home header #menu-toggle-content .menu-button::before {
-  content: "";
-  margin-top: -8px;
+body #main-container #content #home header #menu-toggle-content .menu-button-container .menu-button-top {
+  margin-top: -15px;
 }
-body #main-container #content #home header #menu-toggle-content .menu-button::after {
-  content: "";
-  margin-top: 8px;
-}
-body #main-container #content #home header #menu-toggle-content #menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
-}
-body #main-container #content #home header #menu-toggle-content #menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-body #main-container #content #home header #menu-toggle-content #menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
+body #main-container #content #home header #menu-toggle-content .menu-button-container .menu-button-bottom {
+  margin-top: 16px;
 }
 body #main-container #content #home #frame-banner {
   position: relative;
@@ -581,7 +569,6 @@ body #main-container #footer #copyright {
     align-items: center;
     text-align: center;
     width: 100%;
-    border: 1px solid white !important;
     font-size: 2rem;
   }
   body #main-container #home header #header-menu button {
@@ -660,7 +647,6 @@ body #main-container #footer #copyright {
     align-items: center;
     text-align: center;
     width: 100%;
-    border: 1px solid white !important;
     font-size: 2rem;
   }
   body #main-container #home header #header-menu button {
@@ -709,7 +695,7 @@ body #main-container #footer #copyright {
 }
 @media (max-width: 768px) {
   body #main-container #home #video-container {
-    width: 100%;
+    width: 100vw;
   }
   body #main-container #home header {
     justify-content: space-between !important;
@@ -718,16 +704,19 @@ body #main-container #footer #copyright {
   body #main-container #home header #logo-area #textLogo {
     display: none;
   }
+  body #main-container #home header #header-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    opacity: 0;
+    transition: 0.4s;
+  }
   body #main-container #home header #header-menu ul {
     display: flex;
     flex-direction: column !important;
     flex-wrap: initial;
     padding: 0.4rem 0.4rem;
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    opacity: 0;
-    width: 100%;
+    width: 98vw;
     height: 100vh;
     background-color: #5C0BA3;
   }
@@ -740,7 +729,6 @@ body #main-container #footer #copyright {
     align-items: center;
     text-align: center;
     width: 100%;
-    border: 1px solid white !important;
     font-size: 2rem;
   }
   body #main-container #home header #header-menu button {

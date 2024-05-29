@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2JSRSp91emgaCFpmE8EwIoNIxTU8EglwjKfvmAUmRM" />
-    <title>Code Seven Academy | Academia de Estagiário</title>
+    <title>Code Seven Academy | Academia de Estagio</title>
 
     <!-- FONT GOOGLE EXTERNAL -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./src/css/index.css">
-    <script src="src/js/script.js" defer></script>
+    <script src="src/js/script.js" defer type="module"></script>
 </head>
 <body>
     <div id="main-container">
@@ -47,7 +47,9 @@
                     <div id="menu-toggle-content">
                         <input id="menu-toggle" type="checkbox"/>
                         <label class='menu-button-container' for="menu-toggle">
-                            <div class='menu-button'> </div>
+                            <div class='menu-button-top'></div>
+                            <div class='menu-button-middle'></div>
+                            <div class='menu-button-bottom'></div>
                         </label>
                     </div>
                 </header>
@@ -119,8 +121,8 @@
                         <div id="form-inscricao">
                             <div id="container-info">
                                 <div id="container-matricula">
-                                    <label for="matricula">Matricula</label>
-                                    <input type="text" name="matricula" id="matricula" class="small-input input-setup" placeholder="Ex: 009999">
+                                    <label for="registration">Matricula</label>
+                                    <input type="text" name="registration" id="registration" class="small-input input-setup" placeholder="Ex: 009999">
                                 </div>
                                 <div class="div-setup" id="container-responsible">
                                     <label for="responsible-name">
@@ -128,30 +130,34 @@
                                         <i class="fa-solid fa-circle-info"></i>
                                     </label>
                                     
-                                    <input type="text" name="responsible-name" id="responsible-name" class="full-input input-setup" placeholder="Ex: Pedro Luiz Carvalho de Souza">
+                                    <input type="text" id="responsible-name" class="full-input input-setup" placeholder="Ex: Pedro Luiz Carvalho de Souza">
                                 </div>
-                                <div id="first-name">
+                                <div id="container-first-name">
                                     <label for="first-name">Primeiro nome</label>
                                     <input type="text" name="first-name" id="first-name" class="middle-input input-setup" placeholder="Ex: João">
                                 </div>
                                 <div id="container-surnames">
                                     <label for="surnames">Sobrenomes</label>
-                                    <input type="text" name="surnames" id="surnames" class="larger-input input-setup" placeholder="Ex: da Silva Requião">
+                                    <input type="text" id="surnames" class="larger-input input-setup" placeholder="Ex: da Silva Requião">
+                                </div>
+                                <div id="container-date-birthday">
+                                    <label for="date-birthday">Data de Nascimento</label>
+                                    <input type="text" id="date-birthday" class="input-setup">
                                 </div>
                                 <div class="div-setup" id="container-current-module">
                                     <label for="current-module">
                                         Módulo atual
                                         <i class="fa-solid fa-circle-info"></i>
                                     </label>
-                                    <input type="tel" name="current-module" id="current-module" class="larger-input input-setup" placeholder="Ex: Excel">
+                                    <input type="tel" id="current-module" class="larger-input input-setup" placeholder="Ex: Excel">
                                 </div>
                                 <div class="div-setup" id="container-celphone">
                                     <label for="celphone-number">Celular</label>
-                                    <input type="tel" name="celphone-number" id="celphone-number" class="middle-input input-setup" placeholder="(11) 00000-0000">
+                                    <input type="tel" id="celphone-number" class="middle-input input-setup" placeholder="(11) 00000-0000">
                                 </div>
                                 <div class="div-setup" id="container-email">
                                     <label for="email">E-mail</label>
-                                    <input type="text" name="email" id="email" class="larger-input input-setup"  placeholder="Ex: alunos@gmail.com">
+                                    <input type="text" id="email" class="larger-input input-setup"  placeholder="Ex: alunos@gmail.com">
                                 </div>
                             </div>    
                             <fieldset id="validate-application-form">
@@ -163,48 +169,45 @@
                                     <h4>1 - Selecione os módulos que você possui pelo menos conhecimento básico</h4>
                                     <div id="input-area">
                                         <div>
-                                            <input type="checkbox" name="introducao-informatica" id="introducao-informatica" value="introducao-informatica"><label for="introducao-informatica">Introdução à Informática</label>
+                                            <input type="checkbox" id="introduction-informatics" value="Introdução à Informática"><label for="introduction-informatics">Introdução à Informática</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="windows10" id="windows10"><label for="windows10" value="windows10">Windows 10</label>
+                                            <input type="checkbox" id="windows10" value="Windows 10"><label for="windows10" >Windows 10</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="normas-abnt" id="normas-abnt"><label for="normas-abnt" value="normas-abnt">Normas ABNT</label>
+                                            <input type="checkbox" id="abnt-standards" value="Regras ABNT"><label for="abnt-standards">Normas ABNT</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="word-2016" id="word-2016"><label for="word-2016" value="word-2016">Microsoft Office Word 2016</label>
+                                            <input type="checkbox" id="word-2016" value="Microsoft Word 2016"><label for="word-2016" >Microsoft Office Word 2016</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="excel-2016" id="excel-2016"><label for="excel-2016" value="excel-2016">Microsoft Office Excel 2016</label>
+                                            <input type="checkbox" id="excel-2016" value="Microsoft Excel 2016"><label for="excel-2016">Microsoft Office Excel 2016</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" name="powerpoint-2016" id="powerpoint-2016"><label for="powerpoint-2016" value="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
+                                            <input type="checkbox" id="powerpoint-2016" value="Microsoft Powerpoint 2016"><label for="powerpoint-2016">Microsoft PowerPoint Excel 2016</label>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="ask-simple">
-                                    <h4 for="date-birth">2 - Qual sua data de nascimento?</h4>
-                                    <input type="text" name="date-birth" id="date-birth" class="input-setup">
-                                </div>
-                                <div class="ask-simple">
-                                    <h4>3 - Descreva o motivo pelo qual gostaria de ser um estagiátio</h4>
-                                    <textarea name="input-description-reason" id="input-description-reason" cols="30" rows="10" placeholder="EX: Gostaria de participar porque quero ampliar meus conhecimentos e ser um profissional diferenciado..." class="input-setup"></textarea>
+                                    <h4>2 - Descreva o motivo pelo qual gostaria de ser um estagiátio</h4>
+                                    <textarea id="input-description-reason" cols="30" rows="10" placeholder="EX: Gostaria de participar porque quero ampliar meus conhecimentos e ser um profissional diferenciado..." class="input-setup"></textarea>
                                 </div>
                                 <div id="rules">
-                                    <h4>4 - Leia as <a href="#">Regras do estágio</a></h4>                                    
+                                    <h4>3 - Leia as <a href="#">Regras do estágio</a></h4>                                    
                                     <div>
-                                        <input type="checkbox" name="rules-check" id="rules-check" valeu="Aceito">
-                                        <label>Li e aceito os termos.</label>
+                                        <input type="checkbox" id="rules-check" value="aceito">
+                                        <label for="rules-check">Li e aceito os termos.</label>
                                     </div>                           
                                     <div>
-                                        <input type="checkbox" name="term-accept" id="term-accept" value="aceito">
+                                        <input type="checkbox" id="term-accept" value="aceito">
                                         <label for="term-accept">
                                             Estou ciente que ao inscrever-me no Curso de formação de instrutores (CFI), minhas condutas dentro e fora da instituição estão sujeitas a análise e que terão um peso fundamenta para o meu perfil de candidato.
                                         </label>
                                     </div>
                                 </div>
                             </fieldset>
-                            <button type="button">Finalizar Inscrição</button>
+                            <button type="submit" value="Submit">Finalizar Inscrição</button>
                         </div>
                     </form>
                 </div>

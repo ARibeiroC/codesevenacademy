@@ -83,7 +83,7 @@ body
                         img
                             max-height: 100%
                             
-
+                    // HEADER MENU
                     #header-menu
                         @include flex
                         gap: 1rem
@@ -120,9 +120,10 @@ body
         
                         #menu-toggle
                             display: none
+                            pointer-events: none
                         
                         .menu-button-container
-                            @include flex
+                            @include flex(column)
                             height: 100%
                             width: 30px
                             cursor: pointer
@@ -132,33 +133,20 @@ body
                             padding: 1rem
 
 
-                        .menu-button, .menu-button::before, .menu-button::after
-                            background-color: $color-ice
-                            position: absolute
-                            height: 4px
-                            width: 30px
-                            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1)
-                            border-radius: 2px
-                            pointer-events: none
+                            .menu-button-middle, .menu-button-top, .menu-button-bottom
+                                background-color: $color-ice
+                                position: absolute
+                                height: 4px
+                                width: 30px
+                                transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1)
+                                border-radius: 2px
+                                pointer-events: none
 
-                        .menu-button::before
-                            content: ''
-                            margin-top: -8px
+                            .menu-button-top
+                                margin-top: -15px
 
-                        .menu-button::after
-                            content: ''
-                            margin-top: 8px
-
-                        #menu-toggle:checked + .menu-button-container .menu-button::before
-                            margin-top: 0px
-                            transform: rotate(405deg)
-
-                        #menu-toggle:checked + .menu-button-container .menu-button
-                            background: rgba(255, 255, 255, 0)
-
-                        #menu-toggle:checked + .menu-button-container .menu-button::after
-                            margin-top: 0px
-                            transform: rotate(-405deg)
+                            .menu-button-bottom
+                                margin-top: 16px
 
 
                 #frame-banner
@@ -356,18 +344,6 @@ body
                                     & label i:hover::after
                                         opacity: 1
 
-                                // #container-email
-                                //     width: 250px
-
-                                // #first-name
-                                //     width: 200px
-
-                                // #container-surnames
-                                //     width: 350px
-
-                                // #container-celphone
-                                //     width: 150px
-
 
 
                             #matricula, #celphone-number
@@ -533,7 +509,6 @@ body
                                 @include align-items(center, center)
                                 text-align: center
                                 width: 100%
-                                border: 1px solid white !important
                                 font-size: 2rem
                         
                         
@@ -621,7 +596,6 @@ body
                                 @include align-items(center, center)
                                 text-align: center
                                 width: 100%
-                                border: 1px solid white !important
                                 font-size: 2rem
                         
                         
@@ -681,7 +655,7 @@ body
         #main-container
             #home
                 #video-container
-                    width: 100%
+                    width: 100vw
 
                 header
                     @include align-items(space-between !important, center)
@@ -692,14 +666,15 @@ body
 
 
                     #header-menu
+                        position: absolute
+                        top: calc(100%)
+                        right: -100%
+                        opacity: 0
+                        transition: .4s
                         ul
                             @include flex(column !important)
                             @include padding(.4rem, .4rem)
-                            position: absolute
-                            top: calc(100%)
-                            right: -100%
-                            opacity: 0
-                            width: 100%
+                            width: 98vw
                             height: 100vh
                             background-color: $color-purple
 
@@ -710,7 +685,6 @@ body
                                 @include align-items(center, center)
                                 text-align: center
                                 width: 100%
-                                border: 1px solid white !important
                                 font-size: 2rem
                         
                         
