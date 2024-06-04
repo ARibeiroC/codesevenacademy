@@ -3,12 +3,15 @@
 @import 'variables'
 
 * 
-    @include reset-page('Helvetica')
+    @include reset-page()
     @include reset-text-decoration
     scroll-behavior: smooth
 
+.lazyBackground
+    background: var(--backgroundSrc)
+
 body
-    background: $color-ice
+    // background: var(--lazy)
 
     a
         color: $color-pink
@@ -202,12 +205,12 @@ body
             #about-internship
                 @include padding(.4rem .8rem)
                 background-color: $color-ice
-                background-image: url(../img/simpleLogoPurple.png)
                 background-repeat: no-repeat
                 background-attachment: fixed
                 background-position: center 
                 background-blend-mode: color-dodge
                 background-size: 45%
+
 
                 #about-internship-frame
                     @include flex(column)
@@ -252,8 +255,8 @@ body
                 margin: 1rem
                 @include flex
                 @include b-radius
-                background: url('../img/estagio/form.jpg') no-repeat fixed top
                 background-size: cover
+                background-position: center
                 color: $color-ice
                 height: auto
 

@@ -8,9 +8,10 @@
   scroll-behavior: smooth;
 }
 
-body {
-  background: #f0f0f0;
+.lazyBackground {
+  background: var(--backgroundSrc);
 }
+
 body a {
   color: #D70AC1;
 }
@@ -245,7 +246,6 @@ body #main-container #content #home #frame-banner #description-banner #button-ar
 body #main-container #content #about-internship {
   padding: 0.4rem 0.8rem 0;
   background-color: #f0f0f0;
-  background-image: url(../img/simpleLogoPurple.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -294,8 +294,8 @@ body #main-container #content #application-form {
   flex-direction: row;
   flex-wrap: initial;
   border-radius: 0.25rem;
-  background: url("../img/estagio/form.jpg") no-repeat fixed top;
   background-size: cover;
+  background-position: center;
   color: #f0f0f0;
   height: auto;
 }
