@@ -1,32 +1,33 @@
-import { askChecks, dataCandidate, menuToggleHtml, termsAndRules } from './elementsHtml.js'
-import { lazy, lazyBackground } from './lazyLoadScrollPage.js'
+import { askChecks, dataCandidate, menuToggleHtml, termsAndRules, goToTop } from './elementsHtml.js'
+import { lazyBackground } from './lazyLoadScrollPage.js'
 import { menuToggle, closeMenuToggle } from './menuHamb.js'
 
 
 // EVENTS
-// window.onload = (element) => {
-//     if (element.isInstersecting)
-//     const background = document.querySelector('.lazyLoad')
 
-// }
-
-
-document.addEventListener('scroll', ()=>{
+document.addEventListener('scroll', (element)=>{
     lazyBackground('about-internship', 'application-form')
+    if (document.documentElement.scrollTop > 200) {
+        goToTop.style.opacity = 1
+        goToTop.style.top = '90vh'
+        goToTop.style.left = '80vw'
+    } else {
+        goToTop.style.opacity = 0
+        goToTop.style.top = '100vh'
+    }
 })
 
 document.addEventListener('click', (e)=>{
     menuToggle(e)
-    if (e.target.localName === 'li'){
-        menuToggleHtml.checked = false
-        closeMenuToggle()
-    }
+    // if (e.target.localName === 'li' && window.screen.width > 768){
+    //     menuToggleHtml.checked = false
+    //     closeMenuToggle()
+    // }
 })
 
 document.addEventListener('submit', (e)=>{
     e.preventDefault()
     let candidate = []
-    let element = e.target
 
     dataCandidate.forEach(dtCandidate => {
         let lowerCase = dtCandidate.value

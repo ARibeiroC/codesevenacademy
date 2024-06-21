@@ -11,7 +11,6 @@
     background: var(--backgroundSrc)
 
 body
-    // background: var(--lazy)
 
     a
         color: $color-pink
@@ -36,12 +35,39 @@ body
     section
         height: auto
 
-
     #main-container
-
+        width: 100vw
+        
         #content
             @include flex(column)
             width: 100%
+
+            #go-to-top
+                display: flex
+                justify-content: center
+                align-items: center
+
+                position: fixed
+                top: 92vh
+                
+                width: 50px
+                height: 50px
+
+                font-size: 0.8rem
+                opacity: 0
+                border-radius: 8px
+                border: 1px solid $color-ice
+                background-color: $color-purple
+
+                transition: 1s
+                z-index: 1
+                a   
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    color: $color-ice
+                    width: 100%
+                    height: 100%
 
             #home::after
                 content: ''
@@ -92,6 +118,7 @@ body
                         gap: 1rem
                         @include align-items(end, center)
                         width: 1050px
+                        transition: .4s
                         
                         ul
                             @include flex()
@@ -120,6 +147,7 @@ body
                         display: flex
                         padding: .6rem
                         display: none
+                        z-index: 3
         
                         #menu-toggle
                             display: none
@@ -475,12 +503,15 @@ body
                 @include flex
                 @include align-items(center, center)
 
-
 // RESPONSIVITY IN THE PAGE
 
-@media (max-width: 375px)
+@media (max-width: 1360px)
     body
         #main-container
+            #go-to-top
+                display: flex !important
+                
+
             #home
                 #video-container
                     width: 100%
@@ -494,17 +525,19 @@ body
 
 
                     #header-menu
+                        position: absolute
+                        top: calc(0%)
+                        width: 100vw
+                        right: -100%
+                        opacity: 0
                         ul
                             @include flex(column !important)
                             @include padding(.4rem, .4rem)
                             position: absolute
-                            top: calc(100%)
-                            right: -100%
-                            opacity: 0
-                            width: 100%
-                            height: 100vh
-                            background-color: $color-purple
-
+                            top: 100%
+                            width: 100vw
+                            height: auto
+                            background-color: $color-ice
 
                             a
                                 @include flex
@@ -512,7 +545,7 @@ body
                                 @include align-items(center, center)
                                 text-align: center
                                 width: 100%
-                                font-size: 2rem
+                                font-size: 1.2rem
                         
                         
                         button
@@ -568,6 +601,10 @@ body
 @media (max-width: 425px)
     body
         #main-container
+            overflow-x: hidden
+            #go-to-top
+                display: flex !important
+
             #home
                 #video-container
                     width: 100%
@@ -581,16 +618,13 @@ body
 
 
                     #header-menu
+                        position: absolute
                         ul
                             @include flex(column !important)
                             @include padding(.4rem, .4rem)
                             position: absolute
-                            top: calc(100%)
-                            right: -100%
-                            opacity: 0
-                            width: 100%
-                            height: 100vh
-                            background-color: $color-purple
+                            top: 0%
+                            height: auto
 
 
                             a
@@ -599,7 +633,7 @@ body
                                 @include align-items(center, center)
                                 text-align: center
                                 width: 100%
-                                font-size: 2rem
+                                font-size: 1rem
                         
                         
                         button
@@ -653,9 +687,13 @@ body
                 
 
 
-@media (max-width: 768px)
+@media (max-width: 375px)
     body
         #main-container
+            
+            #go-to-top
+                display: flex !important
+
             #home
                 #video-container
                     width: 100vw
@@ -669,17 +707,14 @@ body
 
 
                     #header-menu
-                        position: absolute
-                        top: calc(100%)
-                        right: -100%
-                        opacity: 0
-                        transition: .4s
+                        position: absolute                        
                         ul
                             @include flex(column !important)
                             @include padding(.4rem, .4rem)
-                            width: 98vw
-                            height: 100vh
-                            background-color: $color-purple
+                            width: 100vw
+                            top: 0%
+                            height: auto
+                            background-color: rgba(255, 255, 255,.9)
 
 
                             a
@@ -688,7 +723,7 @@ body
                                 @include align-items(center, center)
                                 text-align: center
                                 width: 100%
-                                font-size: 2rem
+                                font-size: 1.2rem
                         
                         
                         button
@@ -720,19 +755,20 @@ body
 
                 #form-body
                     width: 100% !important
+                    border: 5px solid red   
 
                 #input-area
                     @include flex(column)
 
                 #container-responsible
                     & label i::after
-                        left: -100px !important
+                        left: -170px !important
                         top: -45px !important
                         font-size: .8rem !important
 
                 #container-current-module
                     & label i::after
-                        left: -70px !important
+                        left: -100px !important
                         top: -45px !important
                         font-size: .8rem !important
 

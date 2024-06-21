@@ -3,6 +3,7 @@ export const menuButtonMiddle = document.querySelector('.menu-button-middle')
 export const menuButtonBottom= document.querySelector('.menu-button-bottom')
 export const headerMenu = document.querySelector('#header-menu')
 export const menuToggleHtml = document.querySelector('#menu-toggle')
+export const goToTop = document.querySelector('#go-to-top')
 
 // ELEMENTS OF FORM
     // DADOS DO CANDIDATO
