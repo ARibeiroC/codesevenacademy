@@ -5,3 +5,5 @@ Site para captação de alunos para inscrição no projeto de Estagia da empresa
 
 
 SITE: https://codesevenacademy.netlify.app/
+
+<img src="https://i.ibb.co/vwWhz4q/banner-Github.png">
