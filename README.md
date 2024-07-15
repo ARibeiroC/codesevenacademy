@@ -4,4 +4,4 @@ Site para captação de alunos para inscrição no projeto de Estagia da empresa
 # EM PROCESSO DE DESENVOLVIMENTO #
 
 
-Acesse: https://aribeiroc.github.io/codesevenacademy/
+SITE: https://aribeiroc.github.io/codesevenacademy/
