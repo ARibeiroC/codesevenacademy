@@ -1,7 +1,7 @@
 # CODE SEVEM ACADEMY
 Site para captação de alunos para inscrição no projeto de Estagia da empresa CODE SEVEN ACADEMY.
 
-# EM CONTRUÇÃO #
+# EM PROCESSO DE DESENVOLVIMENTO #
 
 
 Acesse: https://aribeiroc.github.io/codesevenacademy/
