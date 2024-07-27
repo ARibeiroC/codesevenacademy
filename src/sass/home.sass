@@ -1,0 +1,781 @@
+// IMPORTS
+@import 'mixins'
+@import 'variables'
+
+* 
+    @include reset-page()
+    @include reset-text-decoration
+    scroll-behavior: smooth
+
+.lazyBackground
+    background: var(--backgroundSrc)
+
+body
+
+    a
+        color: $color-pink
+
+    h2
+        margin-top: 2rem
+        margin-bottom: 2rem
+        font-size: 2rem
+
+    h3
+        margin: 0rem 0rem 1rem 0
+        font-size: 1.4rem
+        text-align: justify
+
+    p   
+        text-align: justify
+        line-height: 1.5rem
+
+    ul
+        list-style: none
+
+    section
+        height: auto
+
+    #main-container
+        width: 100vw
+        
+        #content
+            @include flex(column)
+            width: 100%
+
+            #go-to-top
+                display: flex
+                justify-content: center
+                align-items: center
+
+                position: fixed
+                top: 92vh
+                
+                width: 50px
+                height: 50px
+
+                font-size: 0.8rem
+                opacity: 0
+                border-radius: 8px
+                border: 1px solid $color-ice
+                background-color: $color-purple
+
+                transition: 1s
+                z-index: 1
+                a   
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    color: $color-ice
+                    width: 100%
+                    height: 100%
+
+            #home::after
+                content: ''
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                background: rgba(0, 0, 0, .7)
+                border-radius: 5px
+                z-index: 0
+
+            #home
+                background-attachment: fixed
+                height: 100vh
+                position: relative
+                overflow: hidden
+                @include b-radius
+
+                #video-container
+                    @include flex
+                    justify-content: center
+                    align-items: center
+                    position: absolute
+                    height: 100%
+                         
+                header
+                    position: relative
+                    @include flex
+                    @include align-items(center, center)
+                    // background: rgba(0, 0, 0, .7)
+                    @include padding(.4rem .8rem)
+                    height: $header-height
+                    widows: 100%
+                    margin: 0 auto
+                    z-index: 2
+
+
+                    #logo-area
+                        padding: .6rem
+                        height: 4rem
+
+                        img
+                            max-height: 100%
+                            
+                    // HEADER MENU
+                    #header-menu
+                        @include flex
+                        gap: 1rem
+                        @include align-items(end, center)
+                        width: 1050px
+                        transition: .4s
+                        
+                        ul
+                            @include flex()
+                            gap: 1rem
+                            font-weight: bold
+
+                            a
+                                border-bottom: 1px solid transparent
+
+                            a:hover
+                                transition: .4s
+                                color: $color-ice
+                                border-bottom: 1px solid
+
+                        button
+                            @include b-radius
+                            @include size-object(40px, 150px)
+                            @include style-border(0px, transparent, none)
+                            @include style-button($color-pink, $color-ice, 700)
+
+                        button:active
+                            transform: translateY(.1rem)
+                        
+                    // Hamburger Menu
+                    #menu-toggle-content
+                        display: flex
+                        padding: .6rem
+                        display: none
+                        z-index: 3
+        
+                        #menu-toggle
+                            display: none
+                            pointer-events: none
+                        
+                        .menu-button-container
+                            @include flex(column)
+                            height: 100%
+                            width: 30px
+                            cursor: pointer
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            padding: 1rem
+
+
+                            .menu-button-middle, .menu-button-top, .menu-button-bottom
+                                background-color: $color-ice
+                                position: absolute
+                                height: 4px
+                                width: 30px
+                                transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1)
+                                border-radius: 2px
+                                pointer-events: none
+
+                            .menu-button-top
+                                margin-top: -15px
+
+                            .menu-button-bottom
+                                margin-top: 16px
+
+
+                #frame-banner
+                    position: relative
+                    @include flex
+                    @include size-object(97.5%, 80%)
+                    @include align-items(center, flex-start)
+                    @include centralization
+                    @include padding(.4rem .8rem)
+                    z-index: 1     
+
+
+                    #description-banner
+                        @include flex(column)
+                        @include size-object(auto, 80%)
+                        @include align-items(center, center)
+                        color: $color-ice
+                        height: 90%
+
+                        h1  
+                            @include flex
+                            @include align-items(center, center)
+                            flex: .7
+                            // margin: 4rem 0rem 0rem 0rem
+                            font-size: 3rem
+                            text-align: center
+
+                        h3
+                            @include flex
+                            @include align-items(center, center)
+                            flex: .5
+                            // margin: 6rem 0rem
+                            font-size: 1.4rem
+                            text-align: center
+
+                        #button-area
+                            @include flex
+                            @include align-items(center, center)
+                            height: 60px
+                            flex: .8
+
+                            & button
+                                // margin: .6rem
+                                @include style-button($color-pink, $color-ice, 700)
+                                @include style-border(0, transparent, none)
+                                @include size-object(45px, 150px)
+
+                            & button:active
+                                transform: translateY(.1rem)
+
+
+
+            #about-internship
+                @include padding(.4rem .8rem)
+                background-color: $color-ice
+                background-repeat: no-repeat
+                background-attachment: fixed
+                background-position: center 
+                background-blend-mode: color-dodge
+                background-size: 45%
+
+
+                #about-internship-frame
+                    @include flex(column)
+                    @include padding(.4rem, .8rem 4rem .8rem)
+                    // gap: 1rem
+
+                    h3
+                        flex: 0
+                        margin: 1rem 0rem
+                        font-size: 1.4rem
+                        text-align: justify
+
+                    p
+                        line-height: 1.6rem
+                        text-align: justify
+
+                    .warning
+                        @include b-radius
+                        margin: 1rem
+                        box-shadow: 2px 2px 2px $color-darkgray
+                        border: 1px solid $color-darkgray
+                        @include padding(1rem, 1rem)
+                        background-color: $color-warning
+                        
+                    
+            
+            #prerequisites
+                @include padding(.4rem, .8rem 4rem .8rem)
+                background: $color-darkblue
+                margin: 1rem
+                color: $color-ice
+                @include b-radius
+
+                
+                ul
+                    list-style: square
+                    padding: 1rem
+                    line-height: 1.5rem
+                                
+
+            #application-form
+                margin: 1rem
+                @include flex
+                @include b-radius
+                background-size: cover
+                background-position: center
+                color: $color-ice
+                height: auto
+
+                #filter-aplication-form-background
+                    @include padding(.4rem, .8rem 4rem .8rem)
+                    @include b-radius
+                    background: rgba(0, 0, 0, .7)
+
+                    h2, h3
+                        text-align: center
+
+
+                    #form-body
+                        width: 50%
+                        border: 1px solid purple
+                        margin: 0 auto
+                        background: rgba(255, 255, 255, .1)
+                        backdrop-filter: blur(5px)
+                        border: 1px solid
+                        border-radius: 15px
+
+                        input
+                            outline: none
+                            @include b-radius(5px)
+
+                        #form-inscricao
+                            @include flex(column)
+                            @include padding(1rem, .6rem)
+                            gap: .2rem
+                            position: relative
+
+                                
+
+                            #container-info
+                                @include flex(column)
+                                gap: .4rem
+                                    
+                                #container-responsible
+                                    position: relative
+                                
+
+                                    & label i
+                                        position: relative
+
+                                    & label i::after
+                                        pointer-events: none
+                                        text-align: justify
+                                        content: 'Neste campo, deve-se preencher o nome do responsável pelo contrato do curso.'
+                                        opacity: 0
+                                        position: absolute
+                                        background: $color-warning
+                                        color: $color-darkgray
+                                        left: 110%
+                                        top: -190%
+                                        width: 300px
+                                        padding: .6rem
+                                        border-radius: 8px
+                                        transition: .4s
+                                        font-size: .7rem
+                                        font-family: "Helvetica", sans-serif
+                                    
+                                    & label i:hover::after
+                                        opacity: 1
+
+
+                                #container-current-module
+
+                                    & label i
+                                        position: relative
+
+                                    & label i::after
+                                        pointer-events: none
+                                        transition: .4s
+                                        text-align: justify
+                                        content: 'Qual o módulo do curso você esta atualmente aprendendo?'
+                                        position: absolute
+                                        opacity: 0
+                                        background: $color-warning
+                                        color: $color-darkgray
+                                        width: 300px
+                                        left: 110%
+                                        top: -190%
+                                        padding: .6rem
+                                        border-radius: 8px
+                                        font-family: "Helvetica"
+                                        font-size: .7rem
+
+                                    & label i:hover::after
+                                        opacity: 1
+
+
+
+                            #matricula, #celphone-number
+                                text-align: right
+                        
+                    
+
+                            .input-setup
+                                padding: .4rem
+                                margin: .25rem 0
+                                @include flex(column)
+                                height: 35px
+                                width: 100%
+
+                            
+
+                            .div-setup
+                                @include flex(column)
+
+                            #validate-application-form
+                                margin: 1rem 0
+                                padding: .6rem
+                                line-height: 1.5rem
+                                border: none
+
+                                h3
+                                    margin: 1rem 0
+
+                                & p
+                                    margin: 1rem 0
+
+                                .ask-checkbox
+                                    #input-area
+                                        width: 100%
+                                        margin-left: .8rem
+
+                                    & input, label
+                                        margin-right: 0.6rem
+
+                                .ask-simple
+                                    & input
+                                        margin-left: .6rem
+
+
+                                & h4
+                                    margin-bottom: .2rem
+                                
+                                & input, textarea
+                                    margin-bottom: 1rem
+
+                                #date-birth
+                                    width: 95%
+
+                                #input-description-reason
+                                    height: 120px
+                                    resize: none
+                                    margin-left: .6rem
+                                    width: 95%
+
+                                #rules
+                                    @include flex(column)
+                                    & input 
+                                        margin: .6rem
+
+                            button
+                                @include style-button($color-pink, $color-ice, 700)
+                                @include style-border(0, transparent, none)
+                                @include size-object(45px, 250px)
+                                margin: 0 auto
+
+        #footer
+            @include flex(column)
+            @include padding(1rem, 1rem)
+            background: $color-default
+            color: $color-ice
+
+            a
+                border-bottom: 1px solid transparent
+            a:hover
+                border-bottom: 1px solid
+
+
+
+            #footer-info
+                @include flex(row, wrap)
+                @include align-items(space-between, flex-start)
+                width: 100%
+                height: 100%
+
+                #footer-menu
+                    @include flex(column)
+                    @include padding(1rem, 1rem)
+                    height: 100%
+
+                    ul li
+                        margin-bottom: .4rem
+
+                #footer-contacts
+                    @include flex(column)
+                    @include padding(1rem, 1rem)
+                    gap: .4rem
+                    height: 100%
+
+                    #discord
+                        
+                        color: $color-discord
+
+                    #whatsapp
+                        color: $color-whatsapp
+
+                    #email
+                        color: $color-outlook
+
+                    .setup-contacts-apps
+                        @include flex
+                        @include align-items(start, center)
+
+                        i
+                            @include flex
+                            @include align-items(center, center)
+                            @include padding(.4rem)
+                            width: 40px
+                            
+
+            #copyright
+                @include flex
+                @include align-items(center, center)
+
+// RESPONSIVITY IN THE PAGE
+
+@media (max-width: 1360px)
+    body
+        #main-container
+            #go-to-top
+                display: flex !important
+                
+
+            #home
+                #video-container
+                    width: 100%
+
+                header
+                    @include align-items(space-between !important, center)
+
+                    #logo-area                       
+                        #textLogo
+                            display: none
+
+
+                    #header-menu
+                        position: absolute
+                        top: calc(0%)
+                        width: 100vw
+                        right: -100%
+                        opacity: 0
+                        ul
+                            @include flex(column !important)
+                            @include padding(.4rem, .4rem)
+                            position: absolute
+                            top: 100%
+                            width: 100vw
+                            height: auto
+                            background-color: $color-ice
+
+                            a
+                                @include flex
+                                @include padding(.4rem, .4rem)
+                                @include align-items(center, center)
+                                text-align: center
+                                width: 100%
+                                font-size: 1.2rem
+                        
+                        
+                        button
+                            display: none
+
+
+                    #menu-toggle-content
+                        display: block !important
+                            
+
+                #frame-banner
+                    width: 100% !important
+
+                    #description-banner
+                        width: 100% !important
+
+
+                        h1
+                            font-size: 2rem !important
+                            color: $color-pink
+
+
+                        h3
+                            font-size: 1rem !important
+
+
+            #filter-aplication-form-background
+                width: 100%
+
+                #form-body
+                    width: 100% !important
+
+                #input-area
+                    @include flex(column)
+
+                #container-responsible
+                    & label i::after
+                        left: -170px !important
+                        top: -40px !important
+
+                #container-current-module
+                    & label i::after
+                        left: -110px !important
+                        top: -40px !important
+
+                
+            #footer
+                #copyright p
+                    text-align: center !important
+                    font-size: 0.9rem
+
+
+@media (max-width: 425px)
+    body
+        #main-container
+            overflow-x: hidden
+            #go-to-top
+                display: flex !important
+
+            #home
+                #video-container
+                    width: 100%
+
+                header
+                    @include align-items(space-between !important, center)
+
+                    #logo-area                       
+                        #textLogo
+                            display: none
+
+
+                    #header-menu
+                        position: absolute
+                        ul
+                            @include flex(column !important)
+                            @include padding(.4rem, .4rem)
+                            position: absolute
+                            top: 0%
+                            height: auto
+
+
+                            a
+                                @include flex
+                                @include padding(.4rem, .4rem)
+                                @include align-items(center, center)
+                                text-align: center
+                                width: 100%
+                                font-size: 1rem
+                        
+                        
+                        button
+                            display: none
+
+
+                    #menu-toggle-content
+                        display: block !important
+                            
+
+                #frame-banner
+                    width: 100% !important
+
+                    #description-banner
+                        width: 100% !important
+
+
+                        h1
+                            font-size: 2.4rem !important
+                            color: $color-pink
+
+
+                        h3
+                            font-size: 1.2rem !important
+
+
+            #filter-aplication-form-background
+                width: 100%
+
+                #form-body
+                    width: 100% !important
+
+                #input-area
+                    @include flex(column)
+
+                #container-responsible
+                    & label i::after
+                        left: -170px !important
+                        top: -40px !important
+                        font-size: .8rem !important
+
+                #container-current-module
+                    & label i::after
+                        left: -110px !important
+                        top: -40px !important
+                        font-size: .8rem !important
+
+            #footer
+                #copyright p
+                    text-align: center !important
+                
+
+
+@media (max-width: 375px)
+    body
+        #main-container
+            
+            #go-to-top
+                display: flex !important
+
+            #home
+                #video-container
+                    width: 100vw
+
+                header
+                    @include align-items(space-between !important, center)
+
+                    #logo-area                       
+                        #textLogo
+                            display: none
+
+
+                    #header-menu
+                        position: absolute                        
+                        ul
+                            @include flex(column !important)
+                            @include padding(.4rem, .4rem)
+                            width: 100vw
+                            top: 0%
+                            height: auto
+                            background-color: rgba(255, 255, 255,.9)
+
+
+                            a
+                                @include flex
+                                @include padding(.4rem, .4rem)
+                                @include align-items(center, center)
+                                text-align: center
+                                width: 100%
+                                font-size: 1.2rem
+                        
+                        
+                        button
+                            display: none
+
+
+                    #menu-toggle-content
+                        display: block !important
+                            
+
+                #frame-banner
+                    width: 100% !important
+
+                    #description-banner
+                        width: 100% !important
+
+
+                        h1
+                            font-size: 2.4rem !important
+                            color: $color-pink
+
+
+                        h3
+                            font-size: 1.2rem !important
+
+
+            #filter-aplication-form-background
+                width: 100%
+
+                #form-body
+                    width: 100% !important
+                    border: 5px solid red   
+
+                #input-area
+                    @include flex(column)
+
+                #container-responsible
+                    & label i::after
+                        left: -170px !important
+                        top: -45px !important
+                        font-size: .8rem !important
+
+                #container-current-module
+                    & label i::after
+                        left: -100px !important
+                        top: -45px !important
+                        font-size: .8rem !important
+
+
+
+                        
+            #footer
+                #copyright p
+                    text-align: center !important
+                
