@@ -1,9 +1,8 @@
 # CODE SEVEM ACADEMY
-Site para captação de alunos para inscrição no projeto de Estagia da empresa CODE SEVEN ACADEMY.
+Site para captação de inscrição no projeto de Estagio da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
 
-# EM PROCESSO DE DESENVOLVIMENTO #
-Estamos criando a lógica de envio de formulários e gravando no SGBD, buscando usar as melhores técnicas.
-
+## EM PROCESSO DE DESENVOLVIMENTO #
+Estamos na fase de criação da lógica de envio de formulários para no banco de dados, buscando usar as melhores técnicas.
 
 <hr>
 
