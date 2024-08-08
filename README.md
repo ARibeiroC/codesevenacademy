@@ -3,24 +3,24 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
 ## HTML
-&#x2611; Index
-&#x2611; Register
-&#x2611; ConfirmRegister
-&#x2611; Home
+✔️ Index
+✔️ Register
+✔️ ConfirmRegister
+✔️ Home
 
 ## CSS/SASS
 #### Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
-&#x2611; Style Index <br>
-&#x2611; Style Register <br>
-&#x2611; Style ConfirmRegister <br>
-&#x2611; Style Home <br>
+✔️ Style Index <br>
+✔️ Style Register <br>
+✔️ Style ConfirmRegister <br>
+✔️ Style Home <br>
 
 ## FEATURES
-&#x2611; Sistema de Lazyload <br>
-&#x2611; Sistema de Login <br>
-&#x2611; Autenticação de Usuário com token <br>
-&#x2611; Cadastro de Usuário <br>
-&#x2611; Gerenciamento do Local Storage <br>
+✔️ Sistema de Lazyload <br>
+✔️ Sistema de Login <br>
+✔️ Autenticação de Usuário com token <br>
+✔️ Cadastro de Usuário <br>
+✔️ Gerenciamento do Local Storage <br>
 
 
 <hr>
