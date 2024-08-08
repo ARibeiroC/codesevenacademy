@@ -9,7 +9,7 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 &#x2611; Home
 
 ## CSS/SASS
-# Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
+#### Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
 &#x2611; Style Index <br>
 &#x2611; Style Register <br>
 &#x2611; Style ConfirmRegister <br>
