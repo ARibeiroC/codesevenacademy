@@ -3,16 +3,16 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
 ## HTML
-- [x] Index
-- [x] Register
-- [x] ConfirmRegister
-- [x] Home
+&#x2611; Index
+&#x2611; Register
+&#x2611; ConfirmRegister
+&#x2611; Home
 
 ## CSS/SASS
-- [x] Style Index
-- [x] Style Register
-- [x] Style ConfirmRegister
-- [x] Style Home
+&#x2611; Style Index <br>
+&#x2611; Style Register <br>
+&#x2611; Style ConfirmRegister <br>
+&#x2611; Style Home <br>
 
 ## FEATURES
 &#x2611; Sistema de Login <br>
