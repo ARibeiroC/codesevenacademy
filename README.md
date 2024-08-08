@@ -1,7 +1,8 @@
 # CODE SEVEM ACADEMY
-Site para captação de inscrições no projeto de Estagio da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
+Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI) da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
+- [x] Pages
 Estamos na fase de criação da lógica de envio de formulários para no banco de dados, buscando usar as melhores técnicas.
 
 <hr>
