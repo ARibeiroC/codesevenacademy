@@ -2,6 +2,7 @@
 Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI) da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
+## HTML
 - [x] Index
 - [x] Register
 - [x] ConfirmRegister
