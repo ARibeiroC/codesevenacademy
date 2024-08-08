@@ -8,6 +8,14 @@
   scroll-behavior: smooth;
 }
 
+.lazyBackground {
+  background: var(--backgroundSrc);
+}
+
+.hide {
+  display: none !important;
+}
+
 body a {
   color: #D70AC1;
 }
@@ -815,4 +823,4 @@ body #main-container #footer #copyright {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=home.css.map */

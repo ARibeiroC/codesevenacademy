@@ -3,25 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SIGN | CODE SEVEN ACADEMY</title>
     <link rel="stylesheet" href="./src/css/index.css">
+    <script src="./src/js/script.js" defer type="module"></script>
 </head>
 <body>
     <div id="main-container">
-        <div id="banner-login">
-            <div class="filter">
-                <h1>Seja bem vindo</h1>
-            <h4>Crie seu cadastro para poder participar do processo seletivo de estágio</h4>
-            </div>
-        </div>
         <div id="form-login">
-            <form id="form">
-                <input class="text-input-default" type="text" placeholder="Ex: 001234" id="matricula-candidate">
-                <input class="text-input-default" type="email" placeholder="Ex: primeironome@email.com" id="email-candidate">
-                <input class="text-input-default" type="text" placeholder="Ex: José da Costa Filho" id="name-candidate">
-                <input class="text-input-default" type="password" placeholder="*********" id="matricula">
-                <input class="text-input-default" type="password" placeholder="*********" id="matricula">
-                <button id="cadastrar-candidate-btn">Cadastrar</button>
+            <div id="logo-code-seven">
+                <img src="./src/img/simpleLogoWhite.png" alt="">
+            </div>
+            <form id="form-sign-up" class="hide">
+                <h2>Sign Up</h2>
+                <label for="sign-up-matricula-candidate">Matricula</label>
+                <input class="text-input-default" type="text" placeholder="Ex: 001234" id="sign-up-matricula-candidate">
+                <label for="sign-up-name-candidate">Nome Completo</label>
+                <input class="text-input-default" type="text" placeholder="Ex: José da Costa Filho" id="sign-up-name-candidate">
+                <label for="sign-up-email-candidate">E-mail</label>
+                <input class="text-input-default" type="email" placeholder="Ex: primeironome@email.com" id="sign-up-email-candidate">
+                <label for="sign-up-telephone-candidate">Celular de Candidato</label>
+                <input class="text-input-default" type="text" placeholder="(xx) 99999-0000" id="sign-up-telephone-candidate">
+                <label for="sign-up-name-responsible">Nome do Responsável</label>
+                <input class="text-input-default" type="text" placeholder="Ex: José da Costa Filho" id="sign-up-name-responsible">
+                <label for="sign-up-telephone-responsible">Celular do Responsável</label>
+                <input class="text-input-default" type="text" placeholder="(xx) 99999-0000" id="sign-up-telephone-responsible">
+                <button id="btn-sign-up" class="btn-sign">Sign Up</button>
+            </form>
+            <form id="form-sign-in">
+                <h2>Sign In</h2>
+                <label for="matricula-candidate">Matricula</label>
+                <input class="text-input-default" type="text" placeholder="Ex: 001234" id="sign-in-matricula-candidate">
+                <label for="password">Senha</label>
+                <input class="text-input-default" type="password" placeholder="*********" id="sign-in-password">
+                <button id="btn-sign-in" type="button" class="btn-sign">Sign In</button>
+                <p>Não possui uma conta? <span id="cadastrar-se">Cadastre-se</span></p>
             </form>
         </div>
     </div>

@@ -1,20 +1,3 @@
-export function lazy(){
-    function handleIntersection(entries) {
-        entries.forEach((entry)=>{
-            if (entry.isIntersecting){
-                entry.target.style.backgroundImage = `url(${entry.target.dataset.src})`
-                observer.unobserve(entry.target)
-            }
-        })
-    }
-
-    // const images = document.querySelectorAll('[data-src]')
-    
-    const observer = new IntersectionObserver(handleIntersection)
-    
-    images.forEach(image => observer.observe(image))
-}
-
 const backgroundVisible = document.querySelectorAll('section')
 let backImage
 

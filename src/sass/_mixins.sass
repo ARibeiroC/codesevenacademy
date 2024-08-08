@@ -1,5 +1,5 @@
-@import 'variables'
-    
+@import 'variables'    
+
 @mixin reset-page($font:'Helvetica')
     padding: 0
     margin: 0
@@ -112,3 +112,19 @@
 
 @mixin lazyload($image)
     background-image: url($image)
+
+@mixin button
+    border: none
+    font-weight: bold
+    border-radius: 6px
+    transition: .1s
+    box-shadow: 2px 2px 4px $color-default
+    @content
+
+    &:active
+        box-shadow: 2px 2px 4px inset $color-default
+        transform: translateY(1px)
+
+
+
+
