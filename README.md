@@ -6,6 +6,8 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 - [x] Register
 - [x] ConfirmRegister
 - [x] Home
+
+## CSS/SASS
 - [x] Style Index
 - [x] Style Register
 - [x] Style ConfirmRegister
