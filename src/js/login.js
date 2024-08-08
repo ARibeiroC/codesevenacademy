@@ -45,7 +45,7 @@ async function signIn(data){
             if (dataframe[i].registerCandidate === users[0] && dataframe[i].passwordCandidate === users[1]){
                 localStorage.setItem('token', token(8))
                 localStorage.setItem('user', JSON.stringify({user: dataframe[i].nameComplete}))
-                window.open('/home.html')
+                window.open('/home.html', "_Self")
             }
         }
     })
