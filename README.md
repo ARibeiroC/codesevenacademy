@@ -15,11 +15,10 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 - [x] Style Home
 
 ## FEATURES
-&#x2611; Sistema de Login
-&#x2611; Autenticação de Usuário com token
-&#x2611; Cadastro de Usuário
-&#x2611; Gerenciamento do Local Storage
-Estamos na fase de criação da lógica de envio de formulários para no banco de dados, buscando usar as melhores técnicas.
+&#x2611; Sistema de Login <br>
+&#x2611; Autenticação de Usuário com token <br>
+&#x2611; Cadastro de Usuário <br>
+&#x2611; Gerenciamento do Local Storage <br>
 
 <hr>
 
