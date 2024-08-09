@@ -1,4 +1,5 @@
 import {API_KEY, API_URL, APP_ID, headers} from './conexao.js'
+import { validateSignUpInputFieldsCandidate } from './validateInputs.js'
 
 
 function createDatacandidate (data){
@@ -13,8 +14,8 @@ function createDatacandidate (data){
         cellphoneResponsible: celularResponsavel,
         passwordCandidate: '123'
     }
-
-    signUp(dataCandidate)
+    console.log(dataCandidate)
+    // signUp(dataCandidate)
 }
 
 async function signUp(data) {

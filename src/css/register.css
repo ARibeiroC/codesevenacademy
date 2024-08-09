@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("../img/backgroundLogin.jpg") no-repeat fixed;
+  background-image: linear-gradient(-90deg, rgb(25, 14, 56) 10%, rgb(42, 18, 109), rgb(70, 34, 168));
   background-size: cover;
   color: #D70AC1;
 }
@@ -31,7 +31,7 @@ body #main-container #banner-login {
   display: flex;
   justify-content: center;
   height: 100%;
-  background: url("../img/bg1.jpg") no-repeat;
+  background: url("../img/bgRegister.jpg") no-repeat;
   background-size: cover;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -46,12 +46,26 @@ body #main-container #banner-login .filter {
   background-color: rgba(0, 0, 0, 0.5);
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  color: #f0f0f0;
+}
+body #main-container #banner-login .filter h2 {
+  margin-block: 15px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+body #main-container #banner-login .filter h3 {
+  text-align: justify;
+  font-weight: bold;
+  margin-block: 40px;
+}
+body #main-container #banner-login .filter h4 {
+  text-align: justify;
 }
 body #main-container #banner-login .filter #logo-code-seven {
-  margin: 10rem 0 5rem;
+  margin-block: 35px;
 }
 body #main-container #banner-login .filter #logo-code-seven img {
-  max-width: 150px;
+  max-width: 200px;
 }
 body #main-container #banner-login .filter h3 {
   text-align: center;
@@ -113,6 +127,7 @@ body #main-container #form-login .btn-sign {
   background-color: #D70AC1;
   color: #f0f0f0;
   font-size: 1rem;
+  margin: 1rem 0;
 }
 body #main-container #form-login .btn-sign:active {
   box-shadow: 2px 2px 4px inset #111;

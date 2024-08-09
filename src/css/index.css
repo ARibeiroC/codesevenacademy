@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("../img/backgroundLogin.jpg") no-repeat fixed;
+  background-image: linear-gradient(rgb(25, 14, 56) 20%, rgb(42, 18, 109) 90%);
   background-size: cover;
   color: #D70AC1;
 }
@@ -25,31 +25,50 @@ body #main-container {
   height: 80vh;
   background-color: transparent;
   border-radius: 25px;
+  background-color: #f0f0f0;
 }
 body #main-container #banner-login {
+  display: flex;
+  justify-content: center;
   height: 100%;
-  width: 50%;
-  background: url("../img/bg1.jpg") no-repeat;
+  background: url("../img/bgRegister.jpg") no-repeat;
   background-size: cover;
-  border-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 body #main-container #banner-login .filter {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 2rem;
-  width: 100%;
   height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   color: #f0f0f0;
-  text-align: center;
 }
-body #main-container #banner-login .filter h1 {
-  margin-bottom: 1rem;
+body #main-container #banner-login .filter h2 {
+  margin-block: 15px;
   font-size: 2.5rem;
-  text-shadow: 0px 0 px 5px #f0f0f0;
+  font-weight: bold;
+}
+body #main-container #banner-login .filter h3 {
+  text-align: justify;
+  font-weight: bold;
+  margin-block: 40px;
 }
 body #main-container #banner-login .filter h4 {
-  margin-bottom: 1rem;
+  text-align: justify;
+}
+body #main-container #banner-login .filter #logo-code-seven {
+  margin-block: 35px;
+}
+body #main-container #banner-login .filter #logo-code-seven img {
+  max-width: 200px;
+}
+body #main-container #banner-login .filter h3 {
+  text-align: center;
 }
 body #main-container #form-login {
   display: flex;
@@ -115,11 +134,11 @@ body #main-container #form-login .btn-sign:active {
 }
 body #main-container #form-login p {
   margin: 1rem 0;
-  color: #f0f0f0;
+  color: #D70AC1;
   text-align: center;
 }
 body #main-container #form-login p span {
-  color: #D70AC1;
+  color: #0078D4;
   cursor: pointer;
 }
 body #main-container #form-login #form-sign-in::before {

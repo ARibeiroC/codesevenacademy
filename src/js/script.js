@@ -3,7 +3,7 @@ import { createDatacandidate, getAllCandidate } from './register.js'
 import { lazyBackground } from './lazyLoadScrollPage.js'
 import { menuToggle } from './menuHamb.js'
 import { telephoneMask } from './masksInputs.js'
-import { validateInputTelephone } from './validateInputs.js'
+import { validateInputTelephone, validateSignUpInputFieldsCandidate } from './validateInputs.js'
 import { signIn, authUser } from './login.js'
 
 // EVENTS
@@ -44,14 +44,6 @@ document.addEventListener('click', (e)=>{
     }
 
 
-    if (element.id === 'btn-sign-up'){
-        const dataFieldsCandidate = []
-        signUpFields.forEach( field => {
-            dataFieldsCandidate.push(field.value)
-        })
-        createDatacandidate(dataFieldsCandidate)
-    }
-
     if (element.id === 'btn-sign-in'){
         signIn(signInFields)
     }
@@ -60,32 +52,27 @@ document.addEventListener('click', (e)=>{
 
 document.addEventListener('submit', (e)=>{
     e.preventDefault()
-    let candidate = []
 
-    signUpFields.forEach(dtCandidate => {
-        let lowerCase = dtCandidate.value
-        candidate.push(lowerCase.toLowerCase())
-    })
+    const element = e.target
 
-    askChecks.forEach(validData=>{
-        let lowerCase = validData.value
-        candidate.push(lowerCase.toLowerCase())
-    })
-
-    termsAndRules.forEach(checks =>{
-        let lowerCase= checks.value
-        candidate.push(lowerCase.toLowerCase())
-    })
+    // CADASTRANDO OS DADOS DO FORMULÁRIO
+    if (element.id === 'form-sign-up'){      
+        // VALIDANDO OS DADOS DO FORMULÁRIO
+        const candidate = validateSignUpInputFieldsCandidate(signUpFields)
+        createDatacandidate(candidate)
+    }
 })
 
 document.addEventListener('input', (e)=>{
     const input = e.target
 
+    // CRIANDO UMA MASCARA PARA O INPUT DE TELEFONE DO CANDIDATO
     if (input.id === 'sign-up-telephone-candidate'){
         const updateValue = validateInputTelephone(input.value)
         input.value = updateValue;
     }
 
+    // CRIANDO UMA MASCARA PARA O INPUT DE TELEFONE DO RESPONSÁVEL
     if (input.id === 'sign-up-telephone-responsible'){
         const updateValue = validateInputTelephone(input.value)
         input.value = updateValue;
