@@ -1,5 +1,5 @@
 # CODE SEVEM ACADEMY
-Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI) da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
+Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
 ## HTML
@@ -9,22 +9,32 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 - [X] Home
 - [ ] Prova
 
-## CSS/SASS
+<hr>
+
+## CSS/SASS 
 #### Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
-- [X] Style Index Interface
-- [X] Style Register Interface
-- [ ] Style ConfirmRegister Interface
-- [X] Style Home
+- [X] Index Interface
+- [X] Register Interface
+    - [X] Custom invalid field
+- [ ] ConfirmRegister Interface
+- [X] Home
 - [X] Custon Button
+<hr>
 
 ## FEATURES
-- [X] Sistema de Lazyload
-- [X] Sistema de Login
-- [X] Autenticação de login de usuário com token
-- [ ] Validação dos campos de login
-- [X] Cadastro de Usuário
-- [X] Validação dos campos de cadastro
-- [X] Gerenciamento do Local Storage
+
+- [ ] Gerenciamento do Local Storage
+- [ ] Gerador de Prova
+
+#### Login
+  - [X] Sistema de Login
+  - [X] Autenticação de login de usuário com token
+  - [ ] Validação dos campos de login
+
+#### Cadastro
+  - [X] Cadastro de Usuário
+  - [X] Validação dos campos de cadastro
+  - [X] Mascara de campo de telefone
 
 
 <hr>
