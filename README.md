@@ -11,8 +11,6 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
 - [X] Home
 - [ ] Prova
 
-<hr>
-
 ## CSS/SASS 
 #### Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
 - [X] Página Index
@@ -30,7 +28,6 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
 - [X] Página de Prova
     - [ ] Design
     - [ ] Layout
-<hr>
 
 ## FEATURES
 
