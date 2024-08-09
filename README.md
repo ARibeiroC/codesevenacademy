@@ -4,7 +4,9 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
 ## EM PROCESSO DE DESENVOLVIMENTO #
 ## HTML
 - [X] Index
+    - [ ] Form login
 - [X] Register
+    - [ ] Form Cadastro
 - [X] ConfirmRegister
 - [X] Home
 - [ ] Prova
@@ -13,18 +15,29 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
 
 ## CSS/SASS 
 #### Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
-- [X] Index Interface
-- [X] Register Interface
-    - [X] Custom invalid field
-- [ ] ConfirmRegister Interface
+- [X] Página Index
+    - [X] Design
+    - [X] Layout
+- [X] Página de Cadastro
+    - [X] Design
+    - [X] Layout
+- [ ] Página de confirmação de cadastro
+    - [ ] Design
+    - [ ] Layout
 - [X] Home
-- [X] Custon Button
+    - [X] Design
+    - [X] Layout
+- [X] Página de Prova
+    - [ ] Design
+    - [ ] Layout
 <hr>
 
 ## FEATURES
 
-- [ ] Gerenciamento do Local Storage
+- [X] Gerenciamento do Local Storage
 - [ ] Gerador de Prova
+- [X] Criação de um botão personalizado
+- [X] Carregar a página de login após cadastrar usuário
 
 #### Login
   - [X] Sistema de Login
