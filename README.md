@@ -47,7 +47,6 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
   - [X] Mascara de campo de telefone
 
 
-<hr>
 
 SITE: https://codesevenacademy.netlify.app/ <br><br>
 <img src="https://i.ibb.co/B2NG2QK/tela-de-login.jpg" alt="tela-de-login"><br><br>
