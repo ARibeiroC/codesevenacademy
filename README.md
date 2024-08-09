@@ -11,10 +11,11 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 
 ## CSS/SASS
 #### Para criar os estilos CSS utilizamos o framework SASS, para termos uma maior flexibilidade e rapidez
-- [X] Style Index
-- [X] Style Register
-- [X] Style ConfirmRegister
+- [X] Style Index Interface
+- [ ] Style Register Interface
+- [ ] Style ConfirmRegister Interface
 - [X] Style Home
+- [ ] Custon Button
 
 ## FEATURES
 - [X] Sistema de Lazyload
