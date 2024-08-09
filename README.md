@@ -29,6 +29,6 @@ Site para cadastro dos candidatos para o Curso de Formação de Instrutores (CFI
 
 <hr>
 
-SITE: https://codesevenacademy.netlify.app/
-
+SITE: https://codesevenacademy.netlify.app/ <br><br>
+<img src="https://i.ibb.co/B2NG2QK/tela-de-login.jpg" alt="tela-de-login"><br><br>
 <img src="https://i.ibb.co/mXTY8wd/banner-Github-2.png" alt="banner do site">
