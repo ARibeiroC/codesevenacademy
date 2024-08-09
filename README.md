@@ -44,7 +44,7 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
 #### Cadastro
   - [X] Cadastro de Usuário
   - [X] Validação dos campos de cadastro
-  - [X] Mascara de campo de telefone
+  - [X] Máscara para os campos de Telefone
 
 
 
