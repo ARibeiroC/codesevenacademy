@@ -16,6 +16,7 @@ Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da
 - [X] Página Index
     - [X] Design
     - [X] Layout
+    - [X] Responsividade
 - [X] Página de Cadastro
     - [X] Design
     - [X] Layout
