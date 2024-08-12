@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -61,10 +60,10 @@ body #main-container #banner-login .filter h3 {
 body #main-container #banner-login .filter h4 {
   text-align: justify;
 }
-body #main-container #banner-login .filter #logo-code-seven {
+body #main-container #banner-login .filter .logo-code-seven {
   margin-block: 35px;
 }
-body #main-container #banner-login .filter #logo-code-seven img {
+body #main-container #banner-login .filter .logo-code-seven img {
   max-width: 200px;
 }
 body #main-container #banner-login .filter h3 {
@@ -74,6 +73,7 @@ body #main-container #form-login {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 5%;
   width: 40%;
   min-width: 400px;
@@ -82,33 +82,32 @@ body #main-container #form-login {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-body #main-container #form-login #logo-code-seven {
-  width: 150px;
-  margin-bottom: 1rem;
+body #main-container #form-login .logo-code-seven {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-body #main-container #form-login #logo-code-seven img {
-  max-width: 100%;
+body #main-container #form-login .logo-code-seven img {
+  width: 50%;
 }
-body #main-container #form-login #sign-buttons {
-  margin-bottom: 1rem;
-  align-self: end;
-}
-body #main-container #form-login #form-sign-up, body #main-container #form-login #form-sign-in {
+body #main-container #form-login #form-sign-in {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2rem;
 }
-body #main-container #form-login #form-sign-up label, body #main-container #form-login #form-sign-in label {
-  color: #f0f0f0;
+body #main-container #form-login #form-sign-in label {
+  color: #5C0BA3;
   font-weight: bold;
   margin-bottom: 0.2rem;
 }
-body #main-container #form-login #form-sign-up h2, body #main-container #form-login #form-sign-in h2 {
+body #main-container #form-login #form-sign-in h2 {
   margin-bottom: 1rem;
   text-shadow: 0 0 4px #5C0BA3;
   font-size: 2rem;
 }
-body #main-container #form-login #form-sign-up .text-input-default, body #main-container #form-login #form-sign-in .text-input-default {
+body #main-container #form-login #form-sign-in .text-input-default {
   height: 40px;
   padding-inline: 0.4rem;
   outline: none;
@@ -141,25 +140,37 @@ body #main-container #form-login p span {
   color: #0078D4;
   cursor: pointer;
 }
-body #main-container #form-login #form-sign-in::before {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  content: "matricula já existe";
-  height: auto;
-  padding: 0.4rem;
-  top: 0%;
-  background-color: #ffbbbb;
-  color: #ff2222;
-  font-weight: bold;
-  opacity: 0;
+
+@media (max-width: 1280px) {
+  body #main-container {
+    width: 90%;
+  }
+  body #main-container #banner-login {
+    flex: 1;
+  }
+  body #main-container #form-login {
+    flex: 1;
+    min-width: 200px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  body #main-container #form-login .logo-code-seven {
+    display: flex;
+    padding: 2rem;
+    margin-bottom: 0 !important;
+  }
+  body #main-container #form-login .logo-code-seven img {
+    width: 50%;
+  }
+  body #main-container #form-login #form-sign-in {
+    width: 90%;
+    padding: 0 !important;
+  }
 }
-body #main-container #form-login #form-sign-in::before span {
-  font-weight: bold;
-}
-body #main-container #form-login .hide {
-  display: none !important;
+@media (max-width: 540px) {
+  body #main-container #banner-login {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

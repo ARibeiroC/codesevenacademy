@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(-90deg, rgb(25, 14, 56) 10%, rgb(42, 18, 109), rgb(70, 34, 168));
+  background-image: linear-gradient(rgb(25, 14, 56) 20%, rgb(42, 18, 109) 90%);
   background-size: cover;
   color: #D70AC1;
 }
