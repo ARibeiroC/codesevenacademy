@@ -1,5 +1,6 @@
 # CODE SEVEM ACADEMY
 Site para cadastro dos candidatos do Curso de Formação de Instrutores (CFI) da empresa CODE SEVEN ACADEMY em parceria com a escola MICROJOY.
+Estava sendo desenvolvido com Javascript vanilla, porém, recentemente estou migrando ele para React.
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
 ## HTML
