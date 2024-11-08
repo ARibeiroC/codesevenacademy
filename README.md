@@ -5,9 +5,9 @@ Estava sendo desenvolvido com Javascript vanilla, porém, recentemente estou mig
 ## EM PROCESSO DE DESENVOLVIMENTO #
 ## HTML
 - [X] Index
-    - [ ] Form login
+    - [X] Form login
 - [X] Register
-    - [ ] Form Cadastro
+    - [X] Form Cadastro
 - [X] ConfirmRegister
 - [X] Home
 - [ ] Prova
