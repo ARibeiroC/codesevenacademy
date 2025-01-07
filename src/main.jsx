@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         element: <FormSign />
       },
       {
-        path: `/area-do-candidato`,
+        path: `/area-do-candidato/:id`,
         element: <Home />,
         children: [
           {
