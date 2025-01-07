@@ -74,7 +74,7 @@ export function SideMenu(){
                 <ul >
                     <li className="item-menu">
                         <NavLink to={`/area-do-candidato/${id}`} onClick={()=>disableCheckboxForClickItemMenu()}>
-                            HomePage<FaHouse className="icon" />
+                            Página Inicial<FaHouse className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
