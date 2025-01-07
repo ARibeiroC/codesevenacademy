@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import bg from '../assets/events/capa-blog-10.png'
+import bg from '../assets/Capa-Blog-10.png'
 
-// HOOKs
+// import bg from "../assets/events/Capa-Blog-10.png"
 
 export const Container = styled.div`
     background-size: cover;
