@@ -15,7 +15,7 @@ export function FormSign(){
     
     useEffect(()=>{
         if (isConnected){
-            navigate('/area-do-candidato')
+            navigate('/area-do-candidato/:id')
         }
     },[])
 
