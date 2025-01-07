@@ -13,7 +13,7 @@ import { useUserData } from '../hooks/useUserData.jsx'
 
 
 export function FormSign(){
-    const {id} = useUserData()
+    const [id] = useUserData()
     useEffect(()=>{
         if (isConnected){
             navigate(`/area-do-candidato/${id}`)
