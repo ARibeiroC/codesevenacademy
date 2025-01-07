@@ -9,13 +9,14 @@ import { useForm } from '../hooks/useForm'
 
 // STYLED COMPONENTS IMPORT
 import {Container, BannerLogin, FormSignContainer} from '../css/FormSignCSS.jsx'
+import { useUserData } from '../hooks/useUserData.jsx'
 
 
 export function FormSign(){
-    
+    const {id} = useUserData()
     useEffect(()=>{
         if (isConnected){
-            navigate('/area-do-candidato/:id')
+            navigate(`/area-do-candidato/${id}`)
         }
     },[])
 
