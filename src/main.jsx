@@ -25,6 +25,8 @@ import { useUserData } from './hooks/useUserData.jsx'
 const id = useUserData()
 console.log(id)
 
+
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -80,6 +82,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}/>
   </StrictMode>,
 )

@@ -6,7 +6,7 @@ import { AppStyled } from './css/AppCSS'
 // CONTEXT IMPORT
 import { UsersContextProvider } from './context/UsersContext'
 
-function App({ isConnected }) {
+function App() {
   return (
     <UsersContextProvider>
       <AppStyled>
