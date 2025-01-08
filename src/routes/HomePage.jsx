@@ -1,4 +1,5 @@
 // COMPONENTS IMPORT
+import { TbBackground } from "react-icons/tb"
 import { Banners } from "../components/Banners"
 
 
@@ -28,9 +29,8 @@ export function HomePage(){
                 </div>
             </main>
             <footer>
-                teste
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3603077811733179"
-                     crossorigin="anonymous"></script>
+                     crossOrigin="anonymous"></script>
             </footer>
         </Container>
     )

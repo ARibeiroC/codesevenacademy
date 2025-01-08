@@ -64,7 +64,7 @@ export function SideMenu(){
                 <div className="image-user-profile">
                     <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Perfil img" onClick={handleShowModal}/>
                 </div>
-                <p>{user}</p>
+                <p>{"Candidato"}</p>
                 <label onClick={handleShowMenu}>
                     <input type="checkbox" name="" ref={checkMenu} />
                     <BsGripVertical />
@@ -73,28 +73,28 @@ export function SideMenu(){
             <NavMenu ref={toggleMenu}>
                 <ul >
                     <li className="item-menu">
-                        <NavLink to={`/area-do-candidato/${id}`} onClick={()=>disableCheckboxForClickItemMenu()}>
+                        <NavLink to={`/cfi/area-do-candidato/${id}`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Página Inicial<FaHouse className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to={`/area-do-candidato/${id}/project-cfi`} onClick={()=>disableCheckboxForClickItemMenu()}>
+                        <NavLink to={`/cfi/area-do-candidato/${id}/project-cfi`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Projeto CFI<FaFileLines className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to={`/area-do-candidato/${id}/events`} onClick={()=>disableCheckboxForClickItemMenu()}>
+                        <NavLink to={`/cfi/area-do-candidato/${id}/events`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Eventos<BsCalendar3EventFill className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to={`/area-do-candidato/${id}/test`} onClick={()=>disableCheckboxForClickItemMenu()}>
+                        <NavLink to={`/cfi/area-do-candidato/${id}/test`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Prova<FaFilePen className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to="/" onClick={handleLogout}>
-                            Logout<TbLogout2 className="icon" />
+                        <NavLink to="/cfi" onClick={handleLogout}>
+                            Sair<TbLogout2 className="icon" />
                         </NavLink>
                     </li>
                 </ul>

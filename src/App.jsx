@@ -11,7 +11,6 @@ function App() {
     <UsersContextProvider>
       <AppStyled>
         <Outlet />
-        
       </AppStyled>
     </UsersContextProvider>
   )

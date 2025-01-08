@@ -1,13 +1,14 @@
 // LIBS IMPORT
 import { StrictMode } from 'react'  
 import { createRoot} from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom'
 import './index.css'
 
 // COMPONENTS IMPORT
 import { HomePage } from './routes/HomePage.jsx'
 import App from './App.jsx'
 
+const [user, id] = useUserData()
 
 // ROUTES IMPORT
 import { FormSign } from './routes/FormSign.jsx'
@@ -17,6 +18,7 @@ import { ConfirmRegister } from './routes/ConfirmRegister.jsx'
 import { ProjectCfi } from './routes/ProjectCfi.jsx'
 import { DoTest } from './routes/DoTest.jsx'
 import { Events } from './routes/Events.jsx'
+import { useUserData } from './hooks/useUserData.jsx'
 
 
 const router = createBrowserRouter([
@@ -27,36 +29,44 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        element: <Navigate to="/cfi" />,
+      },
+      {
+        path: '/cfi',
         element: <FormSign />
       },
       {
-        path: `/area-do-candidato/:id`,
+        path: `/cfi/area-do-candidato`,
         element: <Home />,
         children: [
           {
-            path: `/area-do-candidato/:id`,
+            path: '/cfi/area-do-candidato',
+            element: <Navigate to={`/cfi/area-do-candidato/${id}`} />,
+          },
+          {
+            path: `/cfi/area-do-candidato/:id`,
             element: <HomePage />
           },
           {
-            path: `/area-do-candidato/:id/project-cfi`,
+            path: `/cfi/area-do-candidato/:id/project-cfi`,
             element: <ProjectCfi />
           },
           {
-            path: `/area-do-candidato/:id/events`,
+            path: `/cfi/area-do-candidato/:id/events`,
             element: <Events />
           },
           {
-            path: `/area-do-candidato/:id/test`,
+            path: `/cfi/area-do-candidato/:id/test`,
             element: <DoTest />
           },
         ]
       },
       {
-        path: `/confirm-register`,
+        path: `cfi/confirm-register`,
         element: <Home />
       },
       {
-        path: `/ConfirmRegister`,
+        path: `cfi/ConfirmRegister`,
         element: <ConfirmRegister />
       }
     ]

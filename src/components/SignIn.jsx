@@ -35,7 +35,7 @@ export function SignIn(){
                     localStorage.setItem('user', user.nameComplete)
                     localStorage.setItem('_id', user._id)                  
                     localStorage.setItem('token',  useToken())
-                    return navigate(`/area-do-candidato/${user._id}`)
+                    return navigate(`/cfi/area-do-candidato/${user._id}`)
                 } else {
                     setPassword('')
                     setRegister('')
