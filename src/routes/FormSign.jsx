@@ -14,20 +14,20 @@ import { useUserData } from '../hooks/useUserData.jsx'
 export function FormSign(){
 
     const [user, id] = useUserData()
-
-    useEffect(()=>{
-        if (isConnected){
-            console.log(isConnected)
-            navigate(`/cfi/area-do-candidato/${id}`)
-        }
-    },[])
-
     const forms = [<SignIn/>,<SignUp/>]
     const {currentForm, changeForm} = useForm(forms)
     
     const navigate = useNavigate()
 
     const isConnected = useAuthLoginConnected()
+
+    useEffect(()=>{
+        if (isConnected){
+            navigate(`/cfi/area-do-candidato/${id}`)
+        }else {
+            navigate('/cfi')
+        }
+    },[])
 
     return (
         <Container>
