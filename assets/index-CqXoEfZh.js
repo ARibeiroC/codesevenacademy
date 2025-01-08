@@ -482,7 +482,7 @@ Error generating stack: `+i.message+`
         font-size: 2rem;
         font-weight: 500;
     }
-`;function yw(){const e=Tn();return P.useEffect(()=>{setTimeout(()=>{e("/codesevenacademy/")},6e3)},[]),C.jsxs(gw,{children:[C.jsx("h1",{children:"Ops!!! Ocorreu um problema."}),C.jsx("h2",{children:"Error: 404"}),C.jsx("p",{children:"Not Found Page"}),C.jsx("p",{children:"Redirect you for homepage"})]})}const ww=ve.div`
+`;function yw(){const e=Tn();return P.useEffect(()=>{setTimeout(()=>{e("/codesevenacademy/cfi")},6e3)},[]),C.jsxs(gw,{children:[C.jsx("h1",{children:"Ops!!! Ocorreu um problema."}),C.jsx("h2",{children:"Error: 404"}),C.jsx("p",{children:"Not Found Page"}),C.jsx("p",{children:"Redirect you for homepage"})]})}const ww=ve.div`
   display: flex;
   flex: 1;
 
@@ -686,7 +686,7 @@ Error generating stack: `+i.message+`
     p {
         font-size: 1.2rem;
     }
-`;function Tw(){const e=Tn();return P.useEffect(()=>{setTimeout(()=>{e("/codesevenacademy/")},5e3)},[]),C.jsxs(Lw,{children:[C.jsx("h1",{children:"Sucesso!!!"}),C.jsx("h4",{children:"Seu cadastro foi realizado!!!"}),C.jsx("p",{children:"Aguarde... Estamos lhe redirecionando."})]})}const zw=ve.div`
+`;function Tw(){const e=Tn();return P.useEffect(()=>{setTimeout(()=>{e("/codesevenacademy/cfi")},5e3)},[]),C.jsxs(Lw,{children:[C.jsx("h1",{children:"Sucesso!!!"}),C.jsx("h4",{children:"Seu cadastro foi realizado!!!"}),C.jsx("p",{children:"Aguarde... Estamos lhe redirecionando."})]})}const zw=ve.div`
     display: flex;
     flex-direction: column;
 
