@@ -19,11 +19,9 @@ export function Home(){
 
     useEffect(()=>{
         const isConnected = useAuthLoginConnected()
-        console.log(isConnected)
         if (!isConnected){
-            navigate('/cfi')
-            console.log(isConnected)
-            console.log('Usuário não conectado')
+            navigate('/authuser')
+            console.log('Não existe nenhuma autenticação anterior, favor logar novamente')
         }
     },[])
     

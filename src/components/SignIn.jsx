@@ -55,10 +55,6 @@ export function SignIn(){
         setPassword(updateInput)
     }
 
-    useEffect(()=>{
-
-    },[register])
-
     return (
         <Container>
             <div className="logo-media-query">

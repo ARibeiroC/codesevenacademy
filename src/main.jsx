@@ -1,25 +1,29 @@
 // LIBS IMPORT
 import { StrictMode } from 'react'  
 import { createRoot} from 'react-dom/client'
-import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, Navigate} from 'react-router-dom'
 import './index.css'
 
 // COMPONENTS IMPORT
-import { HomePage } from './routes/HomePage.jsx'
 import App from './App.jsx'
 
-const [user, id] = useUserData()
+
 
 // ROUTES IMPORT
+import { HomePage } from './routes/HomePage.jsx'
 import { FormSign } from './routes/FormSign.jsx'
-import { ErrorPage } from './routes/ErrorPage.jsx'
+import { ErrorPage } from './routes/NotFound/index.jsx'
 import { Home } from './routes/Home.jsx'
-import { ConfirmRegister } from './routes/ConfirmRegister.jsx'
-import { ProjectCfi } from './routes/ProjectCfi.jsx'
+import { ConfirmRegister } from './routes/ConfirmRegister/index.jsx'
+import { ProjectCfi } from './routes/ProjectCfi/index.jsx'
 import { DoTest } from './routes/DoTest.jsx'
 import { Events } from './routes/Events.jsx'
+
+// CUSTOM HOOKS IMPORT
 import { useUserData } from './hooks/useUserData.jsx'
 
+const id = useUserData()
+console.log(id)
 
 const router = createBrowserRouter([
   {
@@ -41,7 +45,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/cfi/area-do-candidato',
-            element: <Navigate to={`/cfi/area-do-candidato/${id}`} />,
+            element: <Navigate to={`/cfi/area-do-candidato/${id[1]}`} />,
           },
           {
             path: `/cfi/area-do-candidato/:id`,
@@ -66,7 +70,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: `cfi/ConfirmRegister`,
+        path: `cfi/confirmed-register`,
         element: <ConfirmRegister />
       }
     ]

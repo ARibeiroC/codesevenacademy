@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm.jsx'
 
 // STYLED COMPONENTS IMPORT
-import {Container, BannerLogin, FormSignContainer} from '../../css/FormSignCSS.jsx'
+import {Container, BannerLogin, FormSignContainer} from './styles.js'
 
 
 export function FormSign(){

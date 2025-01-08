@@ -4,16 +4,10 @@ import { useNavigate } from 'react-router-dom'
 
 export function ErrorPage(){
 
-    // const navigate = useNavigate()
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         navigate('/CodeSevenCFIReact')
-    //     },6000)
-    // })
     const navigate = useNavigate()
     useEffect(()=>{
         setTimeout(()=>{
-            navigate('/')
+            navigate('/cfi')
         },6000)
     })
 
