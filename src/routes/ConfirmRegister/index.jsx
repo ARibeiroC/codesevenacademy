@@ -12,7 +12,7 @@ export function ConfirmRegister(){
     
     useEffect(()=>{
         setTimeout(() => {
-            navigate("/")
+            navigate("/cfi")
         }, 5000);
     },[])
 

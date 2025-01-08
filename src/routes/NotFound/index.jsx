@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom'
 import { Container } from './styles'
 
 export function ErrorPage(){
-
     const navigate = useNavigate()
+    
     useEffect(()=>{
         setTimeout(()=>{
             navigate('/cfi')

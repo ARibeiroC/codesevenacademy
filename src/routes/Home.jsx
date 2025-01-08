@@ -16,11 +16,17 @@ import { useNavigate, useParams } from 'react-router-dom'
 export function Home(){
 
     const navigate = useNavigate()
+    const {id} = useParams()
 
     useEffect(()=>{
         const isConnected = useAuthLoginConnected()
+        const URL = window.location.pathname
         if (!isConnected){
-            navigate('/authuser')
+            if (URL === `/cfi/area-do-candidato/${id}`){
+                console.log('Acesso restrito, favor logar')
+                navigate('/cfi/auth-error')
+            }
+            navigate('/cfi/auth-error')
             console.log('Não existe nenhuma autenticação anterior, favor logar novamente')
         }
     },[])

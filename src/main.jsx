@@ -23,9 +23,6 @@ import { Events } from './routes/Events.jsx'
 import { useUserData } from './hooks/useUserData.jsx'
 
 const id = useUserData()
-console.log(id)
-
-
 
 const router = createBrowserRouter([
   {

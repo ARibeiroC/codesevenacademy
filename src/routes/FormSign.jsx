@@ -25,7 +25,7 @@ export function FormSign(){
         if (isConnected){
             navigate(`/cfi/area-do-candidato/${id}`)
         }else {
-            navigate('/cfi/auth-error')
+            navigate('/cfi')
         }
     },[])
 
