@@ -12,7 +12,7 @@ export function ErrorPage(){
     const navigate = useNavigate()
     useEffect(()=>{
         setTimeout(()=>{
-            navigate('/auth-error')
+            navigate('/cfi')
         },6000)
     },[])
 
