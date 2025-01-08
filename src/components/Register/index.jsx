@@ -111,9 +111,6 @@ export function Register(){
         <Container>
             <h2>Register</h2>
             <FormStyled onSubmit={handleSubmit}>
-                {/* <label>
-                    <span>Matricula</span>
-                </label> */}
                 <input
                     name="registerCandidate"
                     type="text" 
@@ -124,9 +121,6 @@ export function Register(){
                     ref={registerCand}
                     required
                 />
-                {/* <label>
-                    <span>Nome Completo</span>
-                </label> */}
                 <input
                     name="nameComplete"
                     id='name-candidate'
@@ -137,9 +131,6 @@ export function Register(){
                     ref={nameComp}
                     required
                 />
-                {/* <label>
-                    <span>E-mail</span>
-                </label> */}
                 <input
                     name="emailCandidate"
                     type="email"
@@ -149,9 +140,6 @@ export function Register(){
                     ref={emailCand}
                     required
                 />
-                {/* <label>
-                    <span>Celular de Candidato</span>
-                </label> */}
                 <input
                     name="telephoneCandidate"
                     type="text"
@@ -163,9 +151,6 @@ export function Register(){
                     ref={telephoneCand}    
                     required
                 />
-                {/* <label>
-                    <span>Nome do Responsável</span>
-                </label> */}
                 <input
                     name="nameResponsible"
                     id='name-reponsible'
@@ -176,9 +161,6 @@ export function Register(){
                     ref={nameResp}
                     required
                 />
-                {/* <label>
-                    <span>Celular do Responsável</span>
-                </label> */}
                 <input
                     name="cellphoneResponsible"
                     type="text"
