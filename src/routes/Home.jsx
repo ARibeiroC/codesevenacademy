@@ -22,12 +22,13 @@ export function Home(){
         const isConnected = useAuthLoginConnected()
         const URL = window.location.pathname
         if (!isConnected){
+
+            // SISTEMA DE VERIFICAÇÃO DE SEGURANÇA PARA IDENTIFICAR POSSIVEIS ATAQUES VIA INJECTION DE ROTAS
             if (URL === `/cfi/area-do-candidato/${id}`){
-                console.log('Acesso restrito, favor logar')
                 navigate('/cfi/auth-error')
             }
+            
             navigate('/cfi/auth-error')
-            console.log('Não existe nenhuma autenticação anterior, favor logar novamente')
         }
     },[])
     

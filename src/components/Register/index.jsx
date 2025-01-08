@@ -1,22 +1,24 @@
-import { Button } from "./Button"
-
-// HOOKs
-import { useNavigate } from 'react-router-dom'
-import { useMaskPhoneNumber } from "../hooks/useMasks"
-import { useFetch } from "../hooks/useFetch"
-import { useValidate } from '../hooks/useValidate'
-import { useEffect, useState } from "react"
-import { useTransformArrayInObject } from "../hooks/useTransformArrayInObject"
-
+// COMPONENT IMPORT
+import { Button } from '../Button'
 
 // STYLED COMPONENTS IMPORT
-import {Container, FormStyled} from '../css/SignCSS'
+import {Container, FormStyled} from './styles'
+
+// NATIVE HOOKS IMPORT
+import { useEffect, useState, useRef } from "react"
+
+// CUSTOM HOOKS IMPORT
+import { useNavigate } from 'react-router-dom'
+import { useMaskPhoneNumber } from "../../hooks/useMasks"
+import { useFetch } from "../../hooks/useFetch"
+import { useValidate } from '../../hooks/useValidate'
 
 
-export function SignUp(){
+export function Register(){
+    
+    // STATEs
     const [candidate, setCandidate] = useState([])
-    const [keys, setKeys] = useState([])
-
+    const [pending, setPending] = useState(false)
     const [registerCandidate, setRegisterCandidate] = useState('')
     const [nameComplete, setNameComplete] = useState('')
     const [emailCandidate, setEmailCandidate] = useState('')
@@ -24,33 +26,37 @@ export function SignUp(){
     const [nameResponsible, setNameResponsible] = useState('')
     const [cellphoneResponsible, setcellphoneResponsible] = useState('')
 
-    // HOOKs implementation
-    const { validateInputNumber, validateInputText } = useValidate()
 
+
+    // REFERENCIA DE INPUTS
+    const registerCand = useRef()
+    const nameComp = useRef()
+    const emailCand = useRef()
+    const telephoneCand = useRef()
+    const nameResp = useRef()
+    const cellphoneResp = useRef()
+
+
+    // IMPLEMENTAÇÃO DE HOOKS
+    const { validateInputNumber, validateInputText } = useValidate()
     const uri = import.meta.env.VITE_API_URL
     const { postData, loading } = useFetch(`${uri}/candidates`)
-
     const navigate = useNavigate()
     
-    const handleSubmit = (e)=>{
+    // FUNÇÕES
+    const handleSubmit = (e)=>{        
         e.preventDefault()
-        const inputs = Array.from(e.target)
-        let inputValue = []
-        let inputKeys = []
-        inputs.forEach((item)=>{
-            if (item.name !== ""){
-                inputValue.push(item.value)
-                inputKeys.push(item.name)
-            }
-        })
-        setCandidate(inputValue)
-        setKeys(inputKeys)
-        // setRegisterCandidate('')
-        // setNameComplete('')
-        // setEmailCandidate('')
-        // setTelephoneCandidate('')
-        // setNameResponsible('')
-        // setcellphoneResponsible('')
+        
+        const formDatas = new FormData(e.target)
+        const data = Object.fromEntries(formDatas)
+
+        data['passwordCandidate'] = "123"
+
+        setPending(true)
+
+        setTimeout(()=>{
+            setCandidate(data)
+        }, 2000)
     }
 
     const onChangeRegisterCandidate = (input)=>{
@@ -86,19 +92,15 @@ export function SignUp(){
         }
     }
 
-    const candidateObject = useTransformArrayInObject(candidate, keys)
-
-    const isRegistred = false
-
     const redirectPage = ()=>{
         navigate('/cfi/confirmed-register')
     }
 
-
+    // USE EFFECTS HOOCK 
     useEffect(()=>{
-        if (candidate[0]){
-            console.log(candidateObject)
-            postData(candidateObject, "POST")
+        if (candidate.length !== 0){
+            postData(candidate, "POST")
+            setPending(false)
             setTimeout(()=>{
                 redirectPage()
             }, 1000)
@@ -107,7 +109,7 @@ export function SignUp(){
 
     return (
         <Container>
-            <h2>Sign Up</h2>
+            <h2>Register</h2>
             <FormStyled onSubmit={handleSubmit}>
                 {/* <label>
                     <span>Matricula</span>
@@ -119,6 +121,7 @@ export function SignUp(){
                     value={registerCandidate}
                     onChange={(e)=>{onChangeRegisterCandidate(e.target.value)}}
                     maxLength={6}
+                    ref={registerCand}
                     required
                 />
                 {/* <label>
@@ -131,6 +134,7 @@ export function SignUp(){
                     placeholder="Nome Completo" 
                     value={nameComplete}
                     onChange={(e)=>{onChangeInputsName(e.target)}}
+                    ref={nameComp}
                     required
                 />
                 {/* <label>
@@ -142,6 +146,7 @@ export function SignUp(){
                     placeholder="E-Mail"
                     value={emailCandidate}
                     onChange={(e)=>{setEmailCandidate(e.target.value)}}
+                    ref={emailCand}
                     required
                 />
                 {/* <label>
@@ -155,6 +160,7 @@ export function SignUp(){
                     maxLength={15}
                     minLength={11}
                     onChange={(e)=>{onChangeInputTelephoneCandidate(e.target.value)}}
+                    ref={telephoneCand}    
                     required
                 />
                 {/* <label>
@@ -167,6 +173,7 @@ export function SignUp(){
                     placeholder="Nome completo do responsável"
                     value={nameResponsible}
                     onChange={(e)=>{onChangeInputsName(e.target)}}
+                    ref={nameResp}
                     required
                 />
                 {/* <label>
@@ -180,9 +187,10 @@ export function SignUp(){
                     maxLength={15}
                     minLength={11}
                     onChange={(e)=>{onChangeInputPhoneNumberResponsable(e.target.value)}}
+                    ref={cellphoneResp}
                     required
                 />
-                {loading ? (
+                {pending ? (
                     <Button wait={true} />
                 ) : (
                     <Button text={"Candidatar-se"} />

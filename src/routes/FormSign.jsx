@@ -1,4 +1,4 @@
-import {SignUp} from '../components/SignUp'
+import {Register} from '../components/Register'
 import {SignIn} from '../components/SignIn'
 import logo from '../assets/completeLogoAcademy.png'
 import { useAuthLoginConnected } from "../hooks/useAuthUserConnected"
@@ -14,7 +14,7 @@ import { useUserData } from '../hooks/useUserData.jsx'
 export function FormSign(){
 
     const [user, id] = useUserData()
-    const forms = [<SignIn/>,<SignUp/>]
+    const forms = [<SignIn/>,<Register/>]
     const {currentForm, changeForm} = useForm(forms)
     
     const navigate = useNavigate()
@@ -44,7 +44,7 @@ export function FormSign(){
                 </div>
             </BannerLogin>
             <FormSignContainer>
-                {currentForm === 0 ? <SignIn /> : <SignUp />}
+                {currentForm === 0 ? <SignIn /> : <Register />}
 
                 {currentForm === 0 ? <p>Não é candidato ainda? <span onClick={(e)=> {changeForm(currentForm+1, e)} }>Candidate-se</span></p> : <p>Eu já tenho um registro! <span onClick={(e)=> {changeForm(currentForm-1, e)} }>Login</span></p>}
             </FormSignContainer>

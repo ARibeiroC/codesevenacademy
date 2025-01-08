@@ -30,7 +30,6 @@ export function useFetch(url){
             })
             setMethod(method)
         }
-        return console.log('Usuário adicionado com êxito!')
     }
 
     const postRequest = async ()=>{

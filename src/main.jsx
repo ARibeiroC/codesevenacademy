@@ -65,11 +65,7 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path: `cfi/confirm-register`,
-        element: <Home />
-      },
-      {
-        path: `cfi/confirmed-register`,
+        path: `/cfi/confirmed-register`,
         element: <ConfirmRegister />
       }
     ]
